@@ -77,3 +77,10 @@ struct Wind: Codable {
     var deg: Int?
     var gust: Double?
 }
+
+//MARK: Units
+enum MeasureUnits {
+    
+    case metric
+    case imperial
+}
