@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="10B-up-1iO">
-                                <rect key="frame" x="157" y="161.5" width="100" height="100"/>
+                                <rect key="frame" x="157" y="211.5" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="0CU-83-YIS"/>
                                     <constraint firstAttribute="width" constant="100" id="r8q-aP-ON6"/>
@@ -121,7 +121,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.083476023677207939" green="0.50989029525042662" blue="0.61647790670394897" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5qK-IN-Uvw" secondAttribute="trailing" id="9GI-IP-pCM"/>
                             <constraint firstItem="5qK-IN-Uvw" firstAttribute="leading" secondItem="31S-66-uuX" secondAttribute="trailing" id="I69-eU-G1K"/>
@@ -130,7 +130,7 @@
                             <constraint firstItem="31S-66-uuX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YJf-xY-VGR"/>
                             <constraint firstItem="31S-66-uuX" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="epD-3m-i4N"/>
                             <constraint firstItem="5qK-IN-Uvw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hK7-Eq-rSG"/>
-                            <constraint firstItem="31S-66-uuX" firstAttribute="top" secondItem="10B-up-1iO" secondAttribute="bottom" constant="100" id="oBh-4x-88w"/>
+                            <constraint firstItem="31S-66-uuX" firstAttribute="top" secondItem="10B-up-1iO" secondAttribute="bottom" constant="50" id="oBh-4x-88w"/>
                         </constraints>
                     </view>
                     <connections>
@@ -150,9 +150,6 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
