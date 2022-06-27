@@ -7,63 +7,68 @@
 
 import Foundation
 
-// MARK: Forecast
+// MARK: - Forecast
 //Использование протокола Codable, позволяющего конвертировать данные в/из JSON
 struct Forecast: Codable {
-    var coord: Coord?
-    var weather: [Weather]?
-    var base: String?
-    var main: Main?
-    var visibility: Int?
-    var wind: Wind?
-    var clouds: Clouds?
-    var dt: Int?
-    var sys: Sys?
-    var timezone, id: Int?
-    var name: String?
-    var cod: Int?
-}
-
-// MARK: Clouds
-struct Clouds: Codable {
-    var all: Int?
-}
-
-// MARK: Coord
-struct Coord: Codable {
-    var lon, lat: Double?
-}
-
-// MARK: Main
-struct Main: Codable {
-    var temp, feelsLike, tempMin, tempMax: Double?
-    var pressure, humidity, seaLevel, grndLevel: Int?
+    let lat, lon: Double
+    let timezone: String
+    let timezoneOffset: Int
+    let current: Current
+    let hourly: [Current]
+    let daily: [Daily]
 
     //Постановка соответствий ключей JSON и свойств структуры
     enum CodingKeys: String, CodingKey {
-        case temp
-        case feelsLike = "feels_like"
-        case tempMin = "temp_min"
-        case tempMax = "temp_max"
-        case pressure, humidity
-        case seaLevel = "sea_level"
-        case grndLevel = "grnd_level"
+        case lat, lon, timezone
+        case timezoneOffset = "timezone_offset"
+        case current, hourly, daily
     }
 }
 
-// MARK: Sys
-struct Sys: Codable {
-    var type, id: Int?
-    var country: String?
-    var sunrise, sunset: Int?
+// MARK: - Current weather
+struct Current: Codable {
+    let dt: Int
+    let sunrise, sunset: Int?
+    let temp, feelsLike: Double
+    let pressure, humidity: Int
+    let dewPoint, uvi: Double
+    let clouds, visibility: Int
+    let windSpeed: Double
+    let windDeg: Int
+    let weather: [WeatherElement]
+    let windGust, pop: Double?
+    let rain: Rain?
+
+    enum CodingKeys: String, CodingKey {
+        case dt, sunrise, sunset, temp
+        case feelsLike = "feels_like"
+        case pressure, humidity
+        case dewPoint = "dew_point"
+        case uvi, clouds, visibility
+        case windSpeed = "wind_speed"
+        case windDeg = "wind_deg"
+        case weather
+        case windGust = "wind_gust"
+        case pop, rain
+    }
 }
 
-// MARK: Weather
-struct Weather: Codable {
-    var id: Int?
-    var main, weatherDescription, icon: String?
+// MARK: - Rain
+struct Rain: Codable {
+    let the1H: Double
 
-    //Постановка соответствий ключей JSON и свойств структуры
+    enum CodingKeys: String, CodingKey {
+        case the1H = "1h"
+    }
+}
+
+// MARK: - WeatherElement
+struct WeatherElement: Codable {
+    let id: Int
+    let main: Main
+    let weatherDescription: Description
+    let icon: String
+
     enum CodingKeys: String, CodingKey {
         case id, main
         case weatherDescription = "description"
@@ -71,16 +76,68 @@ struct Weather: Codable {
     }
 }
 
-// MARK: Wind
-struct Wind: Codable {
-    var speed: Double?
-    var deg: Int?
-    var gust: Double?
+//MARK: Main information
+enum Main: String, Codable {
+    case clear = "Clear"
+    case clouds = "Clouds"
+    case rain = "Rain"
+}
+
+enum Description: String, Codable {
+    case brokenClouds = "broken clouds"
+    case clearSky = "clear sky"
+    case fewClouds = "few clouds"
+    case lightRain = "light rain"
+    case moderateRain = "moderate rain"
+    case overcastClouds = "overcast clouds"
+    case scatteredClouds = "scattered clouds"
+}
+
+// MARK: - Daily weather
+struct Daily: Codable {
+    let dt, sunrise, sunset, moonrise: Int
+    let moonset: Int
+    let moonPhase: Double
+    let temp: Temp
+    let feelsLike: FeelsLike
+    let pressure, humidity: Int
+    let dewPoint, windSpeed: Double
+    let windDeg: Int
+    let windGust: Double
+    let weather: [WeatherElement]
+    let clouds: Int
+    let pop: Double
+    let rain: Double?
+    let uvi: Double
+
+    enum CodingKeys: String, CodingKey {
+        case dt, sunrise, sunset, moonrise, moonset
+        case moonPhase = "moon_phase"
+        case temp
+        case feelsLike = "feels_like"
+        case pressure, humidity
+        case dewPoint = "dew_point"
+        case windSpeed = "wind_speed"
+        case windDeg = "wind_deg"
+        case windGust = "wind_gust"
+        case weather, clouds, pop, rain, uvi
+    }
+}
+
+// MARK: - Feels Like
+struct FeelsLike: Codable {
+    let day, night, eve, morn: Double
+}
+
+// MARK: - Temperature
+struct Temp: Codable {
+    let day, min, max, night: Double
+    let eve, morn: Double
 }
 
 //MARK: Units
 enum MeasureUnits {
-    
+
     case metric
     case imperial
 }
