@@ -1,0 +1,31 @@
+//
+//  FormattedDataType.swift
+//  WeatherApp
+//
+//  Created by Matthew Danilevich on 7/5/22.
+//
+
+import Foundation
+
+// MARK: - FormattedDataType
+enum FormattedDataType {
+
+    case minute
+    case hour
+    case day
+    case fullTime
+
+    var description: String {
+        
+        switch self {
+        case .minute:
+            return "mm"
+        case .hour:
+            return "hh"
+        case .day:
+            return "EEE"
+        case .fullTime:
+            return "dd-MM-yy HH:mm:ss"
+        }
+    }
+}
