@@ -32,6 +32,7 @@
 		A270FFED28758A12000BB264 /* DailyWeatherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A270FFEB28758A12000BB264 /* DailyWeatherCell.xib */; };
 		A270FFF128758D37000BB264 /* RequestDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A270FFEF28758D37000BB264 /* RequestDataCell.swift */; };
 		A270FFF228758D37000BB264 /* RequestDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A270FFF028758D37000BB264 /* RequestDataCell.xib */; };
+		A270FFF82875A335000BB264 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A270FFF72875A335000BB264 /* Constants.swift */; };
 		A2C7AB182869CE64008968F3 /* CityInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C7AB172869CE64008968F3 /* CityInfo.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		A270FFEB28758A12000BB264 /* DailyWeatherCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyWeatherCell.xib; sourceTree = "<group>"; };
 		A270FFEF28758D37000BB264 /* RequestDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestDataCell.swift; sourceTree = "<group>"; };
 		A270FFF028758D37000BB264 /* RequestDataCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RequestDataCell.xib; sourceTree = "<group>"; };
+		A270FFF72875A335000BB264 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A2C7AB172869CE64008968F3 /* CityInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,12 +100,13 @@
 			children = (
 				A25B137928608B2900CB8D52 /* AppDelegate.swift */,
 				A25B137B28608B2900CB8D52 /* SceneDelegate.swift */,
+				A25B138228608B2A00CB8D52 /* Assets.xcassets */,
 				A25B137D28608B2900CB8D52 /* ViewController.swift */,
+				A270FFF62875A319000BB264 /* Constants */,
+				A270FFDC287556CC000BB264 /* Cells */,
+				A270FFE92875645F000BB264 /* Extensions */,
 				A25B138F28608B3D00CB8D52 /* Structure */,
 				A25B137F28608B2900CB8D52 /* Main.storyboard */,
-				A270FFE92875645F000BB264 /* Extensions */,
-				A270FFDC287556CC000BB264 /* Cells */,
-				A25B138228608B2A00CB8D52 /* Assets.xcassets */,
 				A25B138428608B2A00CB8D52 /* LaunchScreen.storyboard */,
 				A25B138728608B2A00CB8D52 /* Info.plist */,
 			);
@@ -185,6 +188,14 @@
 				A270FFF028758D37000BB264 /* RequestDataCell.xib */,
 			);
 			path = RequestDataCell;
+			sourceTree = "<group>";
+		};
+		A270FFF62875A319000BB264 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				A270FFF72875A335000BB264 /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +290,7 @@
 				A270FFC52874B5AA000BB264 /* HourlyForecastData.swift in Sources */,
 				A25B137E28608B2900CB8D52 /* ViewController.swift in Sources */,
 				A270FFC32874B4E0000BB264 /* FormattedDataType.swift in Sources */,
+				A270FFF82875A335000BB264 /* Constants.swift in Sources */,
 				A270FFF128758D37000BB264 /* RequestDataCell.swift in Sources */,
 				A270FFEC28758A12000BB264 /* DailyWeatherCell.swift in Sources */,
 				A270FFE828756241000BB264 /* HourlyWeatherCell+Extension.swift in Sources */,
