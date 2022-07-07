@@ -10,8 +10,8 @@ import RealmSwift
 
 protocol RealmProviderProtocol {
     
-    func writeDataToDatabase(name: Object) -> Void
-    func getResultFromDataBase<T: RealmFetchable>(nameObject: T.Type) -> Results<T>
+    func writeDataToDataBase(name: Object)
+    func getResultForDataBase<T: RealmFetchable>(objectName: T.Type) -> Results<T>
     func addCoordinatesToQueryList(time: Int, lat: Double, lon: Double)
-    func addCurrentWeatherToQueryList(time: Int, weather: String, temp: Double)
+    func addCurrentForecastToQueryList(time: Int, forecast: String, temp: Double)
 }

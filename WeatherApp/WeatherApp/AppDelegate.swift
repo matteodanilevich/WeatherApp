@@ -6,14 +6,22 @@
 //
 
 import UIKit
+import GoogleMaps
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
         // Override point for customization after application launch.
+        if let value = Bundle.main.infoDictionary?["API_MAP_KEY"] as? String { GMSServices.provideAPIKey(value) }
+        let notificationCenter = UNUserNotificationCenter.current()
+        notificationCenter.requestAuthorization(options: [.alert, .badge, .sound]) {
+            (didAllow, error) in
+            if !didAllow {
+                print("Notifications has been declined by user")
+            }
+        }
         return true
     }
 
