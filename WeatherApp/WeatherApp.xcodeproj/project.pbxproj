@@ -45,6 +45,7 @@
 		A2C7AB182869CE64008968F3 /* CityInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C7AB172869CE64008968F3 /* CityInfo.swift */; };
 		A2F014012876DDAF00FC6CD7 /* RequestViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F014002876DDAF00FC6CD7 /* RequestViewController+Extension.swift */; };
 		A2F014032876E10200FC6CD7 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F014022876E10200FC6CD7 /* Int+Extension.swift */; };
+		A2F014052876F01D00FC6CD7 /* ForecastViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F014042876F01D00FC6CD7 /* ForecastViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		A2C7AB172869CE64008968F3 /* CityInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInfo.swift; sourceTree = "<group>"; };
 		A2F014002876DDAF00FC6CD7 /* RequestViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RequestViewController+Extension.swift"; sourceTree = "<group>"; };
 		A2F014022876E10200FC6CD7 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
+		A2F014042876F01D00FC6CD7 /* ForecastViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ForecastViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,10 +213,11 @@
 		A270FFE92875645F000BB264 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				A2F014022876E10200FC6CD7 /* Int+Extension.swift */,
+				A2F014042876F01D00FC6CD7 /* ForecastViewController+Extension.swift */,
 				A270FFE728756241000BB264 /* HourlyWeatherCell+Extension.swift */,
 				A270000E2876AF57000BB264 /* MapViewController+Extension.swift */,
 				A2F014002876DDAF00FC6CD7 /* RequestViewController+Extension.swift */,
-				A2F014022876E10200FC6CD7 /* Int+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2F014052876F01D00FC6CD7 /* ForecastViewController+Extension.swift in Sources */,
 				A25B138E28608B3400CB8D52 /* ForecastData.swift in Sources */,
 				A270FFDF28755B18000BB264 /* HourlyWeatherCell.swift in Sources */,
 				A270FFC52874B5AA000BB264 /* HourlyForecastData.swift in Sources */,

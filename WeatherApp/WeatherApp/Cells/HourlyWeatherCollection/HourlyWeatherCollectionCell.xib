@@ -19,12 +19,12 @@
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="NBW-sS-DYA">
                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jll-XO-Zml">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jll-XO-Zml">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="6mo-MV-Ryz"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -34,16 +34,17 @@
                                     <constraint firstAttribute="height" constant="20" id="7AQ-FG-dDJ"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDX-1Q-lgc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDX-1Q-lgc">
                                 <rect key="frame" x="0.0" y="35" width="50" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="lxC-FN-ZVA"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <color key="backgroundColor" red="0.4001302082" green="0.51706008240000001" blue="0.60996430989999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </stackView>
                 </subviews>
             </view>
@@ -60,7 +61,7 @@
                 <outlet property="currentTemperature" destination="nDX-1Q-lgc" id="49K-gq-pTx"/>
                 <outlet property="currentWeatherIcon" destination="Ybh-lX-4Oh" id="fah-LO-CMJ"/>
             </connections>
-            <point key="canvasLocation" x="173.18840579710147" y="104.46428571428571"/>
+            <point key="canvasLocation" x="171.01449275362319" y="104.46428571428571"/>
         </collectionViewCell>
     </objects>
 </document>

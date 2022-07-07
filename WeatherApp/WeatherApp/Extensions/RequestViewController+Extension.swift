@@ -28,7 +28,7 @@ extension RequestViewController: UITableViewDelegate, UITableViewDataSource {
             dataCell.requestLatitude.text = data.latitude.description
             dataCell.requestLongitude.text = data.longitude.description
             dataCell.requestWeather.text = currentForecast.forecastDescription
-            dataCell.requestTemperature.text = currentForecast.temp.description
+            dataCell.requestTemperature.text = "\(currentForecast.temp.description) °C"
             
             return dataCell
         }
