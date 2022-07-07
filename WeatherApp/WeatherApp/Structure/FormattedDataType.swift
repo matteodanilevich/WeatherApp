@@ -14,6 +14,7 @@ enum FormattedDataType {
     case hour
     case day
     case fullTime
+    case customTime
 
     var description: String {
         
@@ -26,6 +27,8 @@ enum FormattedDataType {
             return "EEE"
         case .fullTime:
             return "dd-MM-yy HH:mm:ss"
+        case .customTime:
+            return "EEE HH:mm:ss"
         }
     }
 }

@@ -15,6 +15,8 @@ class RequestDataCell: UITableViewCell {
     @IBOutlet weak var requestWeather: UILabel!
     @IBOutlet weak var requestTemperature: UILabel!
     
+    static let key = "RequestDataCell"
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

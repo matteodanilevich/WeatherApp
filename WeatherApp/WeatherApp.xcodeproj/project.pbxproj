@@ -43,6 +43,8 @@
 		A270FFFC2875A4F8000BB264 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A270FFFB2875A4F8000BB264 /* MapViewController.swift */; };
 		A270FFFE2875A54C000BB264 /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A270FFFD2875A54C000BB264 /* RequestViewController.swift */; };
 		A2C7AB182869CE64008968F3 /* CityInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C7AB172869CE64008968F3 /* CityInfo.swift */; };
+		A2F014012876DDAF00FC6CD7 /* RequestViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F014002876DDAF00FC6CD7 /* RequestViewController+Extension.swift */; };
+		A2F014032876E10200FC6CD7 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F014022876E10200FC6CD7 /* Int+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +82,8 @@
 		A270FFFB2875A4F8000BB264 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		A270FFFD2875A54C000BB264 /* RequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
 		A2C7AB172869CE64008968F3 /* CityInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInfo.swift; sourceTree = "<group>"; };
+		A2F014002876DDAF00FC6CD7 /* RequestViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RequestViewController+Extension.swift"; sourceTree = "<group>"; };
+		A2F014022876E10200FC6CD7 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +213,8 @@
 			children = (
 				A270FFE728756241000BB264 /* HourlyWeatherCell+Extension.swift */,
 				A270000E2876AF57000BB264 /* MapViewController+Extension.swift */,
+				A2F014002876DDAF00FC6CD7 /* RequestViewController+Extension.swift */,
+				A2F014022876E10200FC6CD7 /* Int+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -357,6 +363,8 @@
 				A270FFFE2875A54C000BB264 /* RequestViewController.swift in Sources */,
 				A270000828762E62000BB264 /* CurrentForecastForRealm.swift in Sources */,
 				A25B137C28608B2900CB8D52 /* SceneDelegate.swift in Sources */,
+				A2F014032876E10200FC6CD7 /* Int+Extension.swift in Sources */,
+				A2F014012876DDAF00FC6CD7 /* RequestViewController+Extension.swift in Sources */,
 				A270FFDA287556C6000BB264 /* CurrentWeatherCell.swift in Sources */,
 				A270FFFC2875A4F8000BB264 /* MapViewController.swift in Sources */,
 				A270000328762CFB000BB264 /* RealmProviderProtocol.swift in Sources */,

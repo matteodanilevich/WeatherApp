@@ -6,24 +6,47 @@
 //
 
 import UIKit
+import RealmSwift
 
 class RequestViewController: UIViewController {
 
+    @IBOutlet weak var tableViewForRequestedData: UITableView!
+
+    var realmProvider: RealmProviderProtocol!
+    private var notificationToken: NotificationToken?
+
     override func viewDidLoad() {
+
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        realmProvider = RealmProvider()
+
+        tableViewForRequestedData.delegate = self
+        tableViewForRequestedData.dataSource = self
+
+        tableViewForRequestedData.register(UINib(nibName: "RequestDataCell", bundle: nil), forCellReuseIdentifier: RequestDataCell.key)
+
+        let data = realmProvider.getResultForDataBase(objectName: QueryListForRealm.self)
+
+        notificationToken = data.observe { [weak self] (changes: RealmCollectionChange) in
+
+            guard let tableViewForRequest = self?.tableViewForRequestedData else { return }
+
+            switch changes {
+
+            case .initial: break
+
+            case .update(_, _, let insertions, _):
+                tableViewForRequest.performBatchUpdates({ tableViewForRequest.insertRows(at: insertions.map({ IndexPath(row: $0, section: 0) }), with: .automatic)
+                })
+
+            case .error(let error): fatalError("\(error)")
+            }
+        }
     }
-    
 
-    /*
-    // MARK: - Navigation
+    deinit {
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        notificationToken?.invalidate()
     }
-    */
-
 }

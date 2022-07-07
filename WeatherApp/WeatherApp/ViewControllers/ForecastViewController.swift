@@ -8,7 +8,10 @@
 import UIKit
 
 class ForecastViewController: UIViewController {
-
+    
+    private var apiProvider: APIProviderProtocol!
+    private var realmProvider: RealmProviderProtocol!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
