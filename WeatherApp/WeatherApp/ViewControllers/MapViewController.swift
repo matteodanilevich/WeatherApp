@@ -41,7 +41,7 @@ class MapViewController: UIViewController {
                 let dateTime = Int(Date().timeIntervalSince1970)
                 self.realmProvider.addCurrentForecastToQueryList(time: dateTime, forecast: weatherDescription, temp: temp)
                 self.realmProvider.addCoordinatesToQueryList(time: dateTime, lat: lat, lon: lon)
-                let alert = UIAlertController(title: "Temperature:", message: "\(temp.description) °C", preferredStyle: .alert)
+                let alert = UIAlertController(title: "Temperature:", message: "Temperature here is equal to \(temp.description) °C", preferredStyle: .alert)
                 let okButton = UIAlertAction(title: "Okey", style: .cancel)
                 alert.addAction(okButton)
                 self.present(alert, animated: true)

@@ -41,8 +41,8 @@ extension ForecastViewController: UITableViewDelegate, UITableViewDataSource {
                 guard let cityName = nameOfCity, let temp = currentTemperature, let forecast = currentForecast, let minTemp = arrayForDailyMinTemp.min(), let maxTemp = arrayForDailyMaxTemp.max() else { return tableCell }
 
                 tableCell.cityName.text = cityName
+                tableCell.currentTemperature.text = "Now: \(temp)°C"
                 tableCell.currentSky.text = forecast
-                tableCell.currentTemperature.text = "\(temp)°C"
                 tableCell.currentTemperatureExtremum.text = "Min: \(minTemp)°C, Max: \(maxTemp)°C"
                 
                 return tableCell

@@ -17,7 +17,7 @@ class ForecastViewController: UIViewController {
 
     var currentTemperature: Double!
     var currentForecast: String!
-    var currentForecastImage: UIImage!
+    private var currentForecastImage: UIImage!
 
     var arrayForHourlyDt: [String] = []
     var arrayForHourlyBadWeatherDt: [Int] = []
@@ -49,7 +49,7 @@ class ForecastViewController: UIViewController {
         }
     }
 
-    let userNotificationCenter = UNUserNotificationCenter.current()
+    private let userNotificationCenter = UNUserNotificationCenter.current()
 
     private var apiProvider: APIProviderProtocol!
     private var realmProvider: RealmProviderProtocol!
