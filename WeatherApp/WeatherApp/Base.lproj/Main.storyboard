@@ -65,7 +65,7 @@
                             </visualEffectView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="C4v-Hv-ezi"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.64252416859999995" green="0.83047833670000004" blue="0.98192387820000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="C4v-Hv-ezi" firstAttribute="bottom" secondItem="zDU-dS-fVu" secondAttribute="bottom" id="5H9-LF-1M8"/>
                             <constraint firstItem="C4v-Hv-ezi" firstAttribute="trailing" secondItem="zDU-dS-fVu" secondAttribute="trailing" id="9zB-GR-8y7"/>
@@ -98,9 +98,7 @@
                         <viewLayoutGuide key="safeArea" id="0Bg-E3-Tyj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Weather by map" image="mappin" catalog="system" id="tu9-vt-Q99">
-                        <color key="badgeColor" red="0.90143385880000004" green="0.98192387820000004" blue="0.73234025709999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Weather by map" image="mappin" catalog="system" id="tu9-vt-Q99"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hIm-6f-DIh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
