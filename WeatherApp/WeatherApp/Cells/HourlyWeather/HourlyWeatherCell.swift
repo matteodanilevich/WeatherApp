@@ -24,6 +24,9 @@ class HourlyWeatherCell: UITableViewCell {
         collectionWeatherCell.dataSource = self
         
         collectionWeatherCell.register(UINib(nibName: "HourlyWeatherCollectionCell", bundle: nil), forCellWithReuseIdentifier: HourlyWeatherCollectionCell.key)
+        
+        //Make invisable selection
+        selectionStyle = .none
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

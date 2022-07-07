@@ -70,6 +70,9 @@ class ForecastViewController: UIViewController {
 
         tableViewForWeatherData.delegate = self
         tableViewForWeatherData.dataSource = self
+        
+        //Hide separator in tableView
+        tableViewForWeatherData.separatorStyle = .none
 
         tableViewForWeatherData.register(UINib(nibName: "CurrentWeatherCell", bundle: nil), forCellReuseIdentifier: CurrentWeatherCell.key)
         tableViewForWeatherData.register(UINib(nibName: "HourlyWeatherCell", bundle: nil), forCellReuseIdentifier: HourlyWeatherCell.key)
