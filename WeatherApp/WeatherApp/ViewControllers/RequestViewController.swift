@@ -33,7 +33,7 @@ class RequestViewController: UIViewController {
         tableViewForRequestedData.refreshControl = refreshControl
         refreshControl.attributedTitle = NSAttributedString(string: "Refreshing data table")
         refreshControl.addTarget(self, action: #selector(refreshTable), for: .valueChanged)
-
+        
         let data = realmProvider.getResultForDataBase(objectName: QueryListForRealm.self)
 
         notificationToken = data.observe { [weak self] (changes: RealmCollectionChange) in
