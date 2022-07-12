@@ -70,7 +70,7 @@ class ForecastViewController: UIViewController {
 
         tableViewForWeatherData.delegate = self
         tableViewForWeatherData.dataSource = self
-        
+
         //Hide separator in tableView
         tableViewForWeatherData.separatorStyle = .none
 
@@ -83,101 +83,105 @@ class ForecastViewController: UIViewController {
     }
 
     private func getCoordinatesByName() {
-        
+
         guard let cityName = nameOfCity else { return }
-        
+
         apiProvider.getCoordinatesByName(name: cityName) { [weak self] resultData in
-            
+
             guard let self = self else { return }
-            
+
             switch resultData {
-                
+
             case .success(let cityValue):
                 if let city = cityValue.first {
-                    
+
                     self.getWeatherForCityByCoordinates(cityInfo: city)
                 }
-                
+
             case .failure(let errorMessage):
                 print(errorMessage.localizedDescription)
             }
         }
     }
-    
+
     private func getWeatherForCityByCoordinates(cityInfo: CityInfo) {
-        
+
         apiProvider.getWeatherForCityByCoordinates(lat: cityInfo.lat, lon: cityInfo.lon) { [weak self] resultData in
-            
+
             self?.blurVisualEffect.isHidden = true
             self?.loadIndicator.stopAnimating()
-            
+
             guard let self = self else { return }
-            
+
             switch resultData {
-                
+
             case .success(let value):
                 guard let actualData = value.current, let lat = value.lat, let lon = value.lon, let weather = actualData.weather, let temperature = actualData.temp, let cloudsState = weather.first?.description else { return }
-                
+
                 self.currentTemperature = temperature
                 self.currentForecast = cloudsState
-                
+
                 let currentDate = Int(Date().timeIntervalSince1970)
-                
+
                 self.realmProvider.addCurrentForecastToQueryList(time: currentDate, forecast: cloudsState, temp: temperature)
                 self.realmProvider.addCoordinatesToQueryList(time: currentDate, lat: lat, lon: lon)
-                
+
                 //MARK: Hourly weather
                 guard let hourlyData = value.hourly else { return }
-                
+
                 let thunderstormCondition = 200...299
                 let rainCondition = 500...599
                 let snowCondition = 600...699
-                
+
                 for info in hourlyData {
-                    
+
                     guard let hourlyDt = info.dt, let hourlyTemp = info.temp, let weatherId = weather.first?.id, let weather = info.weather, let weatherIcon = weather.first?.icon else { return }
-                    
-                    //Получение картинки
+
+                    //Picture receiving
                     if let iconURL = URL(string: "https://openweathermap.org/img/wn/\(weatherIcon)@2x.png") {
-                        
+
                         do {
-                            
+
                             let imageData = try Data(contentsOf: iconURL)
-                            self.arrayForHourlyForecastImage.append(UIImage(data: imageData)!)
+                            if let uiImage = UIImage(data: imageData) {
+                                self.arrayForHourlyForecastImage.append(uiImage)
+                            }
                         }
                         catch {
                             print("Error")
                         }
                     }
-                    
+
                     //Add data to array
                     self.arrayForHourlyDt.append(hourlyDt.convertDataTime(.hour))
                     self.arrayForHourlyTemp.append(hourlyTemp)
                     self.arrayForhHourlyBadWeatherId.append(weatherId)
-                    
+
                     //Data for notification
                     if thunderstormCondition.contains(weatherId) || rainCondition.contains(weatherId) || snowCondition.contains(weatherId) {
-                        
+
                         self.arrayForHourlyBadWeatherDt.append(hourlyDt - 60 * 30)
                     }
                 }
-                
+
                 self.sendWeatherNotifications(arrayTime: self.arrayForHourlyBadWeatherDt)
-                
+
                 //MARK: Daily Weather
                 guard let dailyData = value.daily else { return }
-                
+
                 for info in dailyData {
-                    
+
                     guard let dailyDt = info.dt, let dailyTemp = info.temp, let weather = info.weather, let weatherIcon = weather.first?.icon, let minTemperature = dailyTemp.min, let maxTemperature = dailyTemp.max else { return }
-                    
-                    //Получение картинки
+
+                    //Picture receiving
                     if let iconURL = URL(string: "https://openweathermap.org/img/wn/\(weatherIcon)@2x.png") {
-                        
+
                         do {
-                            
+
                             let imageData = try Data(contentsOf: iconURL)
-                            self.arrayForDailyForecastImage.append(UIImage(data: imageData)!)
+                            if let uiImage = UIImage(data: imageData) {
+                                self.arrayForDailyForecastImage.append(uiImage)
+                            }
                         }
                         catch {
                             print("Error")
@@ -187,32 +191,32 @@ class ForecastViewController: UIViewController {
                     self.arrayForDailyMinTemp.append(minTemperature)
                     self.arrayForDailyMaxTemp.append(maxTemperature)
                 }
-                
+
                 //Update Data in tableView
                 self.tableViewForWeatherData.reloadData()
-                
+
             case .failure(let errorMessage):
                 print(errorMessage)
             }
         }
     }
-    
+
     private func sendWeatherNotifications(arrayTime: [Int]) {
-        
-        guard let time = arrayTime.first else {return}
-        
+
+        guard let time = arrayTime.first else { return }
+
         let notificationContent = UNMutableNotificationContent()
         notificationContent.body = "Bad weather is coming..."
-        
+
         var date = DateComponents()
-        
+
         date.minute = Int(time.convertDataTime(.minute))
         date.hour = Int(time.convertDataTime(.hour))
-        
+
         let calendarTrigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: false)
         let indentifier = String(time)
         let request = UNNotificationRequest(identifier: indentifier, content: notificationContent, trigger: calendarTrigger)
-        
+
         //Add notification
         self.userNotificationCenter.add(request) { error in
             if let error = error {
