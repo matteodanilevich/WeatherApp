@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A21E0CCE28A1240F0092EBAB /* SettingsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21E0CCC28A1240E0092EBAB /* SettingsViewCell.swift */; };
 		A21E0CCF28A1240F0092EBAB /* SettingsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A21E0CCD28A1240E0092EBAB /* SettingsViewCell.xib */; };
+		A21E0CD328A1266D0092EBAB /* WeatherConditionalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21E0CD128A1266D0092EBAB /* WeatherConditionalCell.swift */; };
+		A21E0CD428A1266D0092EBAB /* WeatherConditionalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A21E0CD228A1266D0092EBAB /* WeatherConditionalCell.xib */; };
 		A25B137A28608B2900CB8D52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B137928608B2900CB8D52 /* AppDelegate.swift */; };
 		A25B137C28608B2900CB8D52 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B137B28608B2900CB8D52 /* SceneDelegate.swift */; };
 		A25B138128608B2900CB8D52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A25B137F28608B2900CB8D52 /* Main.storyboard */; };
@@ -53,6 +55,8 @@
 /* Begin PBXFileReference section */
 		A21E0CCC28A1240E0092EBAB /* SettingsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewCell.swift; sourceTree = "<group>"; };
 		A21E0CCD28A1240E0092EBAB /* SettingsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewCell.xib; sourceTree = "<group>"; };
+		A21E0CD128A1266D0092EBAB /* WeatherConditionalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherConditionalCell.swift; sourceTree = "<group>"; };
+		A21E0CD228A1266D0092EBAB /* WeatherConditionalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherConditionalCell.xib; sourceTree = "<group>"; };
 		A25B137628608B2900CB8D52 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25B137928608B2900CB8D52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A25B137B28608B2900CB8D52 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +118,15 @@
 				A21E0CCD28A1240E0092EBAB /* SettingsViewCell.xib */,
 			);
 			path = SettingsViewCell;
+			sourceTree = "<group>";
+		};
+		A21E0CD528A126740092EBAB /* WeatherConditionalCell */ = {
+			isa = PBXGroup;
+			children = (
+				A21E0CD128A1266D0092EBAB /* WeatherConditionalCell.swift */,
+				A21E0CD228A1266D0092EBAB /* WeatherConditionalCell.xib */,
+			);
+			path = WeatherConditionalCell;
 			sourceTree = "<group>";
 		};
 		A25B136D28608B2900CB8D52 = {
@@ -202,6 +215,7 @@
 				A270FFEE28758A18000BB264 /* DailyWeather */,
 				A270FFF328758D3C000BB264 /* RequestDataCell */,
 				A21E0CD028A1241C0092EBAB /* SettingsViewCell */,
+				A21E0CD528A126740092EBAB /* WeatherConditionalCell */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -350,6 +364,7 @@
 				A270FFED28758A12000BB264 /* DailyWeatherCell.xib in Resources */,
 				A25B138128608B2900CB8D52 /* Main.storyboard in Resources */,
 				A270FFF228758D37000BB264 /* RequestDataCell.xib in Resources */,
+				A21E0CD428A1266D0092EBAB /* WeatherConditionalCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +395,7 @@
 				A270FFC72874B6EE000BB264 /* DailyForecastData.swift in Sources */,
 				A270FFFA2875A4AB000BB264 /* ForecastViewController.swift in Sources */,
 				A270000C28763063000BB264 /* AlamofireProvider.swift in Sources */,
+				A21E0CD328A1266D0092EBAB /* WeatherConditionalCell.swift in Sources */,
 				A270FFFE2875A54C000BB264 /* RequestViewController.swift in Sources */,
 				A270000828762E62000BB264 /* CurrentForecastForRealm.swift in Sources */,
 				A25B137C28608B2900CB8D52 /* SceneDelegate.swift in Sources */,
