@@ -67,7 +67,7 @@
                             </visualEffectView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="C4v-Hv-ezi"/>
-                        <color key="backgroundColor" red="0.64252416859999995" green="0.83047833670000004" blue="0.98192387820000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.64313727620000005" green="0.83137255909999996" blue="0.98039215800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="C4v-Hv-ezi" firstAttribute="bottom" secondItem="zDU-dS-fVu" secondAttribute="bottom" id="5H9-LF-1M8"/>
                             <constraint firstItem="C4v-Hv-ezi" firstAttribute="trailing" secondItem="zDU-dS-fVu" secondAttribute="trailing" id="9zB-GR-8y7"/>
