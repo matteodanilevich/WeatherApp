@@ -11,6 +11,8 @@
 		A21E0CCF28A1240F0092EBAB /* SettingsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A21E0CCD28A1240E0092EBAB /* SettingsViewCell.xib */; };
 		A21E0CD328A1266D0092EBAB /* WeatherConditionalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21E0CD128A1266D0092EBAB /* WeatherConditionalCell.swift */; };
 		A21E0CD428A1266D0092EBAB /* WeatherConditionalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A21E0CD228A1266D0092EBAB /* WeatherConditionalCell.xib */; };
+		A21E0CDA28A128190092EBAB /* DataSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21E0CD828A128190092EBAB /* DataSettingCell.swift */; };
+		A21E0CDB28A128190092EBAB /* DataSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A21E0CD928A128190092EBAB /* DataSettingCell.xib */; };
 		A25B137A28608B2900CB8D52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B137928608B2900CB8D52 /* AppDelegate.swift */; };
 		A25B137C28608B2900CB8D52 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B137B28608B2900CB8D52 /* SceneDelegate.swift */; };
 		A25B138128608B2900CB8D52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A25B137F28608B2900CB8D52 /* Main.storyboard */; };
@@ -57,6 +59,8 @@
 		A21E0CCD28A1240E0092EBAB /* SettingsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewCell.xib; sourceTree = "<group>"; };
 		A21E0CD128A1266D0092EBAB /* WeatherConditionalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherConditionalCell.swift; sourceTree = "<group>"; };
 		A21E0CD228A1266D0092EBAB /* WeatherConditionalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherConditionalCell.xib; sourceTree = "<group>"; };
+		A21E0CD828A128190092EBAB /* DataSettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSettingCell.swift; sourceTree = "<group>"; };
+		A21E0CD928A128190092EBAB /* DataSettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataSettingCell.xib; sourceTree = "<group>"; };
 		A25B137628608B2900CB8D52 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25B137928608B2900CB8D52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A25B137B28608B2900CB8D52 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +131,15 @@
 				A21E0CD228A1266D0092EBAB /* WeatherConditionalCell.xib */,
 			);
 			path = WeatherConditionalCell;
+			sourceTree = "<group>";
+		};
+		A21E0CDC28A1281E0092EBAB /* DataSettingCell */ = {
+			isa = PBXGroup;
+			children = (
+				A21E0CD828A128190092EBAB /* DataSettingCell.swift */,
+				A21E0CD928A128190092EBAB /* DataSettingCell.xib */,
+			);
+			path = DataSettingCell;
 			sourceTree = "<group>";
 		};
 		A25B136D28608B2900CB8D52 = {
@@ -216,6 +229,7 @@
 				A270FFF328758D3C000BB264 /* RequestDataCell */,
 				A21E0CD028A1241C0092EBAB /* SettingsViewCell */,
 				A21E0CD528A126740092EBAB /* WeatherConditionalCell */,
+				A21E0CDC28A1281E0092EBAB /* DataSettingCell */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -365,6 +379,7 @@
 				A25B138128608B2900CB8D52 /* Main.storyboard in Resources */,
 				A270FFF228758D37000BB264 /* RequestDataCell.xib in Resources */,
 				A21E0CD428A1266D0092EBAB /* WeatherConditionalCell.xib in Resources */,
+				A21E0CDB28A128190092EBAB /* DataSettingCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +402,7 @@
 				A270FFF128758D37000BB264 /* RequestDataCell.swift in Sources */,
 				A270000A28763053000BB264 /* RealmProvider.swift in Sources */,
 				A270FFEC28758A12000BB264 /* DailyWeatherCell.swift in Sources */,
+				A21E0CDA28A128190092EBAB /* DataSettingCell.swift in Sources */,
 				A270FFE828756241000BB264 /* HourlyWeatherCell+Extension.swift in Sources */,
 				A270000F2876AF57000BB264 /* MapViewController+Extension.swift in Sources */,
 				A270FFE428755C61000BB264 /* HourlyWeatherCollectionCell.swift in Sources */,

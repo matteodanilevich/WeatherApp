@@ -1,5 +1,5 @@
 //
-//  WeatherConditionalCell.swift
+//  DataSettingCell.swift
 //  WeatherApp
 //
 //  Created by Mateo Danilevich on 8/8/22.
@@ -7,12 +7,12 @@
 
 import UIKit
 
-class WeatherConditionalCell: UITableViewCell {
+class DataSettingCell: UITableViewCell {
 
-    static let key = "WeatherConditionalCell"
+    static let key = "DataSettingCell"
     
-    @IBOutlet weak var weatherConditionName: UILabel!
-    @IBOutlet weak var weatherConditionIcon: UIImageView!
+    @IBOutlet weak var dataSettingName: UILabel!
+    @IBOutlet weak var dataSettingIcon: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
