@@ -22,7 +22,7 @@
                     <connections>
                         <segue destination="YgK-KP-I7e" kind="relationship" relationship="viewControllers" id="Y0r-Mw-Wci"/>
                         <segue destination="REv-aC-lSl" kind="relationship" relationship="viewControllers" id="67e-hg-4Q7"/>
-                        <segue destination="ghj-SQ-fe9" kind="relationship" relationship="viewControllers" id="PMM-u5-IwU"/>
+                        <segue destination="HWf-r0-Axm" kind="relationship" relationship="viewControllers" id="RWX-40-nnj"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3gl-DM-8YK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -65,30 +65,46 @@
                                 </view>
                                 <blurEffect style="light"/>
                             </visualEffectView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vgl-7T-hZE">
+                                <rect key="frame" x="359" y="44" width="45" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="location.fill" catalog="system"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZa-yH-9dO">
+                                <rect key="frame" x="313.5" y="44" width="45.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="C4v-Hv-ezi"/>
                         <color key="backgroundColor" red="0.64313727620000005" green="0.83137255909999996" blue="0.98039215800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="C4v-Hv-ezi" firstAttribute="bottom" secondItem="zDU-dS-fVu" secondAttribute="bottom" id="5H9-LF-1M8"/>
                             <constraint firstItem="C4v-Hv-ezi" firstAttribute="trailing" secondItem="zDU-dS-fVu" secondAttribute="trailing" id="9zB-GR-8y7"/>
+                            <constraint firstItem="bZa-yH-9dO" firstAttribute="top" secondItem="C4v-Hv-ezi" secondAttribute="top" id="E2p-Pw-c7E"/>
                             <constraint firstItem="pgq-iw-XtP" firstAttribute="top" secondItem="1G4-OC-HYE" secondAttribute="top" id="IfP-IB-pwa"/>
                             <constraint firstItem="zDU-dS-fVu" firstAttribute="top" secondItem="C4v-Hv-ezi" secondAttribute="top" id="J2d-GS-IJn"/>
+                            <constraint firstItem="Vgl-7T-hZE" firstAttribute="top" secondItem="C4v-Hv-ezi" secondAttribute="top" id="MRU-U7-SRA"/>
+                            <constraint firstItem="Vgl-7T-hZE" firstAttribute="leading" secondItem="bZa-yH-9dO" secondAttribute="trailing" id="UJ2-LD-cqi"/>
                             <constraint firstItem="zDU-dS-fVu" firstAttribute="leading" secondItem="C4v-Hv-ezi" secondAttribute="leading" id="ZzW-k5-rSp"/>
                             <constraint firstItem="pgq-iw-XtP" firstAttribute="leading" secondItem="1G4-OC-HYE" secondAttribute="leading" id="hwe-R2-KhL"/>
                             <constraint firstAttribute="trailing" secondItem="pgq-iw-XtP" secondAttribute="trailing" id="ikR-c7-IJO"/>
                             <constraint firstAttribute="bottom" secondItem="pgq-iw-XtP" secondAttribute="bottom" id="u4B-5v-ceI"/>
+                            <constraint firstItem="C4v-Hv-ezi" firstAttribute="trailing" secondItem="Vgl-7T-hZE" secondAttribute="trailing" constant="10" id="xJ2-pk-uT7"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Current Weather" image="cloud.sun" catalog="system" id="VxK-fh-oDL"/>
                     <connections>
                         <outlet property="blurVisualEffect" destination="pgq-iw-XtP" id="MXc-tT-vYi"/>
+                        <outlet property="gpsButton" destination="Vgl-7T-hZE" id="jPx-CR-e4g"/>
                         <outlet property="loadIndicator" destination="gRx-Dc-Uwz" id="Klg-2d-ldM"/>
+                        <outlet property="locationButton" destination="bZa-yH-9dO" id="s7e-dV-TSo"/>
                         <outlet property="tableViewForWeatherData" destination="zDU-dS-fVu" id="VKb-G3-Hfp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vp6-JI-ptp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-736" y="-680"/>
+            <point key="canvasLocation" x="-736.23188405797111" y="-680.35714285714278"/>
         </scene>
         <!--Weather by map-->
         <scene sceneID="MDV-Hq-6u2">
@@ -106,43 +122,44 @@
             </objects>
             <point key="canvasLocation" x="-736" y="-5"/>
         </scene>
-        <!--Requests List-->
-        <scene sceneID="RQ9-1T-JVx">
+        <!--Settings-->
+        <scene sceneID="pyH-n1-Pg5">
             <objects>
-                <viewController storyboardIdentifier="RequestViewController" id="ghj-SQ-fe9" customClass="RequestViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dvn-94-qYQ">
+                <viewController storyboardIdentifier="SettingsViewController" id="HWf-r0-Axm" customClass="SettingsViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iEv-5B-ZSv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gdP-m8-7W4">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="I6Q-Rs-OQ3">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <inset key="scrollIndicatorInsets" minX="0.0" minY="5" maxX="0.0" maxY="5"/>
                             </tableView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="MNV-sd-RRq"/>
+                        <viewLayoutGuide key="safeArea" id="caC-Cm-EV8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="gdP-m8-7W4" firstAttribute="leading" secondItem="MNV-sd-RRq" secondAttribute="leading" id="2yQ-Ze-jgA"/>
-                            <constraint firstItem="MNV-sd-RRq" firstAttribute="trailing" secondItem="gdP-m8-7W4" secondAttribute="trailing" id="Cti-GI-PsZ"/>
-                            <constraint firstItem="gdP-m8-7W4" firstAttribute="top" secondItem="MNV-sd-RRq" secondAttribute="top" id="Hvq-mB-kyd"/>
-                            <constraint firstItem="MNV-sd-RRq" firstAttribute="bottom" secondItem="gdP-m8-7W4" secondAttribute="bottom" id="czd-yJ-EZP"/>
+                            <constraint firstItem="caC-Cm-EV8" firstAttribute="trailing" secondItem="I6Q-Rs-OQ3" secondAttribute="trailing" id="U6l-xy-XEG"/>
+                            <constraint firstItem="caC-Cm-EV8" firstAttribute="bottom" secondItem="I6Q-Rs-OQ3" secondAttribute="bottom" id="am5-S6-vqo"/>
+                            <constraint firstItem="I6Q-Rs-OQ3" firstAttribute="top" secondItem="caC-Cm-EV8" secondAttribute="top" id="rrC-Q9-fJ1"/>
+                            <constraint firstItem="I6Q-Rs-OQ3" firstAttribute="leading" secondItem="caC-Cm-EV8" secondAttribute="leading" id="rvy-jm-och"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Requests List" image="list.bullet.rectangle" catalog="system" id="55h-t8-O8n"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="swift" catalog="system" id="5fc-iw-o4J"/>
                     <connections>
-                        <outlet property="tableViewForRequestedData" destination="gdP-m8-7W4" id="yrb-qL-Dgu"/>
+                        <outlet property="tableView" destination="I6Q-Rs-OQ3" id="AFU-ac-oNH"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pFB-cW-1RE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Wu-Ov-nkF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-736.23188405797111" y="673.66071428571422"/>
+            <point key="canvasLocation" x="-736" y="680"/>
         </scene>
     </scenes>
     <resources>
         <image name="cloud.sun" catalog="system" width="128" height="95"/>
-        <image name="list.bullet.rectangle" catalog="system" width="128" height="93"/>
+        <image name="location.fill" catalog="system" width="128" height="121"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="mappin" catalog="system" width="105" height="128"/>
+        <image name="swift" catalog="system" width="128" height="113"/>
         <systemColor name="secondarySystemGroupedBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

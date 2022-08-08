@@ -12,7 +12,9 @@ class ForecastViewController: UIViewController {
     @IBOutlet weak var tableViewForWeatherData: UITableView!
     @IBOutlet weak var blurVisualEffect: UIVisualEffectView!
     @IBOutlet weak var loadIndicator: UIActivityIndicatorView!
-
+    @IBOutlet weak var locationButton: UIButton!
+    @IBOutlet weak var gpsButton: UIButton!
+    
     var nameOfCity: String!
 
     var currentTemperature: Double!
