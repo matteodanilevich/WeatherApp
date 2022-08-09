@@ -10,7 +10,7 @@ import RealmSwift
 
 class WeatherConditional: Object {
     
-    @objc dynamic var rain: Bool = true
-    @objc dynamic var thunderStorm: Bool = true
     @objc dynamic var snow: Bool = true
+    @objc dynamic var thunder: Bool = true
+    @objc dynamic var rain: Bool = true
 }
