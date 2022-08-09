@@ -22,13 +22,13 @@ extension RequestViewController: UITableViewDelegate, UITableViewDataSource {
             
             let data = realmProvider.getResultForDataBase(objectName: QueryListForRealm.self)[indexPath.row]
             
-            guard let currentForecast = data.currentForecast else { return dataCell}
+            guard let currentForecast = data.currentForecast else { return dataCell }
             
             dataCell.requestData.text = data.time.convertDataTime(.customTime)
             dataCell.requestLatitude.text = data.latitude.description
             dataCell.requestLongitude.text = data.longitude.description
             dataCell.requestWeather.text = currentForecast.forecastDescription
-            dataCell.requestTemperature.text = "\(currentForecast.temp.description) °C"
+            dataCell.requestTemperature.text = NSLocalizedString(currentForecast.temp.description, comment: "")
             
             return dataCell
         }

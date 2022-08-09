@@ -66,8 +66,8 @@ extension ForecastViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 tableCell.currentDate.text = "\(arrayForDailyDt[indexPath.row])"
                 tableCell.weatherIcon.image = arrayForDailyForecastImage[indexPath.row]
-                tableCell.minTemperature.text = "Min: \(arrayForDailyMinTemp[indexPath.row])°C"
-                tableCell.maxTemperature.text = "Max: \(arrayForDailyMaxTemp[indexPath.row])°C"
+                tableCell.minTemperature.text = "Min: \(arrayForDailyMinTemp[indexPath.row])"
+                tableCell.maxTemperature.text = "Max: \(arrayForDailyMaxTemp[indexPath.row])"
                 
                 return tableCell
             }

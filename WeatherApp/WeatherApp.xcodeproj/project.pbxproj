@@ -26,6 +26,9 @@
 		A21E0CF328A235080092EBAB /* RealmSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21E0CF228A235080092EBAB /* RealmSettings.swift */; };
 		A21E0CF528A2353B0092EBAB /* WeatherConditionals.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21E0CF428A2353A0092EBAB /* WeatherConditionals.swift */; };
 		A21E0CF728A235F20092EBAB /* TypeMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21E0CF628A235F20092EBAB /* TypeMode.swift */; };
+		A21E0CFD28A2AD250092EBAB /* CustomInfoLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21E0CFC28A2AD250092EBAB /* CustomInfoLabel.swift */; };
+		A21E0D0128A2AD450092EBAB /* CustomInfoLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = A21E0D0028A2AD450092EBAB /* CustomInfoLabel.xib */; };
+		A21E0D0628A2B7F40092EBAB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A21E0D0828A2B7F40092EBAB /* Localizable.strings */; };
 		A25B137A28608B2900CB8D52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B137928608B2900CB8D52 /* AppDelegate.swift */; };
 		A25B137C28608B2900CB8D52 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B137B28608B2900CB8D52 /* SceneDelegate.swift */; };
 		A25B138128608B2900CB8D52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A25B137F28608B2900CB8D52 /* Main.storyboard */; };
@@ -87,6 +90,9 @@
 		A21E0CF228A235080092EBAB /* RealmSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmSettings.swift; sourceTree = "<group>"; };
 		A21E0CF428A2353A0092EBAB /* WeatherConditionals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherConditionals.swift; sourceTree = "<group>"; };
 		A21E0CF628A235F20092EBAB /* TypeMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeMode.swift; sourceTree = "<group>"; };
+		A21E0CFC28A2AD250092EBAB /* CustomInfoLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInfoLabel.swift; sourceTree = "<group>"; };
+		A21E0D0028A2AD450092EBAB /* CustomInfoLabel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomInfoLabel.xib; sourceTree = "<group>"; };
+		A21E0D0728A2B7F40092EBAB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A25B137628608B2900CB8D52 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25B137928608B2900CB8D52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A25B137B28608B2900CB8D52 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -177,6 +183,15 @@
 			path = SystemSettingsCell;
 			sourceTree = "<group>";
 		};
+		A21E0D0928A2B9610092EBAB /* CustomInfoLabel */ = {
+			isa = PBXGroup;
+			children = (
+				A21E0CFC28A2AD250092EBAB /* CustomInfoLabel.swift */,
+				A21E0D0028A2AD450092EBAB /* CustomInfoLabel.xib */,
+			);
+			path = CustomInfoLabel;
+			sourceTree = "<group>";
+		};
 		A25B136D28608B2900CB8D52 = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +224,7 @@
 				A25B137F28608B2900CB8D52 /* Main.storyboard */,
 				A25B138428608B2A00CB8D52 /* LaunchScreen.storyboard */,
 				A25B138728608B2A00CB8D52 /* Info.plist */,
+				A21E0D0828A2B7F40092EBAB /* Localizable.strings */,
 			);
 			path = WeatherApp;
 			sourceTree = "<group>";
@@ -268,6 +284,7 @@
 				A21E0CD028A1241C0092EBAB /* SettingsViewCell */,
 				A21E0CD528A126740092EBAB /* WeatherConditionalCell */,
 				A21E0CDC28A1281E0092EBAB /* DataSettingCell */,
+				A21E0D0928A2B9610092EBAB /* CustomInfoLabel */,
 				A21E0CE128A129B20092EBAB /* SystemSettingsCell */,
 			);
 			path = Cells;
@@ -419,6 +436,8 @@
 				A25B138628608B2A00CB8D52 /* LaunchScreen.storyboard in Resources */,
 				A21E0CE028A129AB0092EBAB /* SystemSettingsCell.xib in Resources */,
 				A21E0CCF28A1240F0092EBAB /* SettingsViewCell.xib in Resources */,
+				A21E0D0628A2B7F40092EBAB /* Localizable.strings in Resources */,
+				A21E0D0128A2AD450092EBAB /* CustomInfoLabel.xib in Resources */,
 				A270FFE528755C61000BB264 /* HourlyWeatherCollectionCell.xib in Resources */,
 				A270FFE028755B18000BB264 /* HourlyWeatherCell.xib in Resources */,
 				A25B138328608B2A00CB8D52 /* Assets.xcassets in Resources */,
@@ -468,6 +487,7 @@
 				A21E0CF128A232AF0092EBAB /* WeatherConditionalView+Extensions.swift in Sources */,
 				A21E0CD328A1266D0092EBAB /* WeatherConditionalCell.swift in Sources */,
 				A270FFFE2875A54C000BB264 /* RequestViewController.swift in Sources */,
+				A21E0CFD28A2AD250092EBAB /* CustomInfoLabel.swift in Sources */,
 				A21E0CF528A2353B0092EBAB /* WeatherConditionals.swift in Sources */,
 				A270000828762E62000BB264 /* CurrentForecastForRealm.swift in Sources */,
 				A21E0CF728A235F20092EBAB /* TypeMode.swift in Sources */,
@@ -486,6 +506,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		A21E0D0828A2B7F40092EBAB /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A21E0D0728A2B7F40092EBAB /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		A25B137F28608B2900CB8D52 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

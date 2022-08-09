@@ -1,0 +1,43 @@
+/* 
+  Localizable.strings
+  WeatherApp
+
+  Created by Mateo Danilevich on 8/9/22.
+  
+*/
+
+"Current weather" = "Current weather";
+"Hourly weather" = "Hourly weather";
+"Daily weather" = "Daily weather";
+
+"Min" = "Min";
+"Max" = "Max";
+
+"Temperature" = "Temperature";
+"Speed Wind" = "Speed Wind";
+
+"Enter the name of the city" = "Enter the name of the city";
+"Enter name" = "Enter name";
+
+"Ok" = "Ok";
+"Cancel" = "Cancel";
+
+"Place not found" = "Place not found";
+"Weather conditions will worsen soon" = "Weather conditions will worsen soon";
+"Refreshing" = "Refreshing";
+"true" = "true";
+"false" = "false";
+
+"thunderstorm" = "thunderstorm";
+"rain" = "rain";
+"snow" = "snow";
+
+"Choice weather conditional" = "Choice weather conditional";
+"History request" = "History request";
+
+"24-hour format" = "24-hour format";
+"12-hour format" = "12-hour format";
+"System measurement" = "System measurement";
+"Date format" = "Date format";
+"metrical system" = "metrical system";
+"imperial system" = "imperial system";
