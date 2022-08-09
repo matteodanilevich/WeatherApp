@@ -23,16 +23,16 @@ extension DataViewController: UITableViewDelegate, UITableViewDataSource {
             if checkData() {
                 switch DataFormat(rawValue: indexPath.row) {
                 case .firstData:
-                    cell.dataSettingIcon.image = UIImage(systemName: "square.fill")
+                    cell.dataSettingIcon.image = UIImage(systemName: "circle.fill")
                 default:
-                    cell.dataSettingIcon.image = UIImage(systemName: "square")
+                    cell.dataSettingIcon.image = UIImage(systemName: "circle")
                 }
             } else {
                 switch DataFormat(rawValue: indexPath.row) {
                 case .firstData:
-                    cell.dataSettingIcon.image = UIImage(systemName: "square")
+                    cell.dataSettingIcon.image = UIImage(systemName: "circle")
                 default:
-                    cell.dataSettingIcon.image = UIImage(systemName: "square.fill")
+                    cell.dataSettingIcon.image = UIImage(systemName: "circle.fill")
                 }
             }
             return cell
