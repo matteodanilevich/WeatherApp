@@ -8,22 +8,33 @@
 import UIKit
 
 class DataViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    var provider = RealmProvider()
+    var defaults = UserDefaults()
+    var dataSettings: [String]!
+    
+    enum DataFormat: Int {
+        case firstData = 0
+        case secondData
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        dataSettings = ["12-hour format", "24-hour format"]
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        tableView.register(UINib(nibName: "DataSettingCell", bundle: nil), forCellReuseIdentifier: DataSettingCell.key)
     }
-    */
-
+    
+    func checkData() -> Bool {
+        
+        let settingList = provider.getResultForDataBase(objectName: RealmSettings.self).last
+        let dataFormat = settingList?.formatData
+        return dataFormat ?? false
+    }
 }

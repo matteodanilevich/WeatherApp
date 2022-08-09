@@ -13,4 +13,5 @@ class CurrentForecastForRealm: Object {
     @objc dynamic var time: Int = 0
     @objc dynamic var forecastDescription: String = ""
     @objc dynamic var temp: Double = 0.0
+    @objc dynamic var isCurrentWeather: Bool = true
 }

@@ -20,6 +20,12 @@
 		A21E0CE728A167970092EBAB /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21E0CE628A167970092EBAB /* DataViewController.swift */; };
 		A21E0CE928A1687E0092EBAB /* WeatherConditionalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21E0CE828A1687D0092EBAB /* WeatherConditionalView.swift */; };
 		A21E0CEB28A168D20092EBAB /* SystemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21E0CEA28A168D20092EBAB /* SystemViewController.swift */; };
+		A21E0CED28A231B20092EBAB /* SystemViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21E0CEC28A231B20092EBAB /* SystemViewController+Extension.swift */; };
+		A21E0CEF28A231CD0092EBAB /* DataViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21E0CEE28A231CD0092EBAB /* DataViewController+Extension.swift */; };
+		A21E0CF128A232AF0092EBAB /* WeatherConditionalView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21E0CF028A232AF0092EBAB /* WeatherConditionalView+Extensions.swift */; };
+		A21E0CF328A235080092EBAB /* RealmSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21E0CF228A235080092EBAB /* RealmSettings.swift */; };
+		A21E0CF528A2353B0092EBAB /* WeatherConditionals.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21E0CF428A2353A0092EBAB /* WeatherConditionals.swift */; };
+		A21E0CF728A235F20092EBAB /* TypeMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21E0CF628A235F20092EBAB /* TypeMode.swift */; };
 		A25B137A28608B2900CB8D52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B137928608B2900CB8D52 /* AppDelegate.swift */; };
 		A25B137C28608B2900CB8D52 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B137B28608B2900CB8D52 /* SceneDelegate.swift */; };
 		A25B138128608B2900CB8D52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A25B137F28608B2900CB8D52 /* Main.storyboard */; };
@@ -75,6 +81,12 @@
 		A21E0CE628A167970092EBAB /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		A21E0CE828A1687D0092EBAB /* WeatherConditionalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherConditionalView.swift; sourceTree = "<group>"; };
 		A21E0CEA28A168D20092EBAB /* SystemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemViewController.swift; sourceTree = "<group>"; };
+		A21E0CEC28A231B20092EBAB /* SystemViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SystemViewController+Extension.swift"; sourceTree = "<group>"; };
+		A21E0CEE28A231CD0092EBAB /* DataViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataViewController+Extension.swift"; sourceTree = "<group>"; };
+		A21E0CF028A232AF0092EBAB /* WeatherConditionalView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeatherConditionalView+Extensions.swift"; sourceTree = "<group>"; };
+		A21E0CF228A235080092EBAB /* RealmSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmSettings.swift; sourceTree = "<group>"; };
+		A21E0CF428A2353A0092EBAB /* WeatherConditionals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherConditionals.swift; sourceTree = "<group>"; };
+		A21E0CF628A235F20092EBAB /* TypeMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeMode.swift; sourceTree = "<group>"; };
 		A25B137628608B2900CB8D52 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25B137928608B2900CB8D52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A25B137B28608B2900CB8D52 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -211,6 +223,9 @@
 				A2C7AB172869CE64008968F3 /* CityInfo.swift */,
 				A270000528762DEC000BB264 /* QueryListForRealm.swift */,
 				A270000728762E62000BB264 /* CurrentForecastForRealm.swift */,
+				A21E0CF228A235080092EBAB /* RealmSettings.swift */,
+				A21E0CF428A2353A0092EBAB /* WeatherConditionals.swift */,
+				A21E0CF628A235F20092EBAB /* TypeMode.swift */,
 			);
 			path = Structure;
 			sourceTree = "<group>";
@@ -285,6 +300,9 @@
 				A270000E2876AF57000BB264 /* MapViewController+Extension.swift */,
 				A2F014002876DDAF00FC6CD7 /* RequestViewController+Extension.swift */,
 				A21E0CE428A1301B0092EBAB /* SettingsViewController+Extension.swift */,
+				A21E0CEC28A231B20092EBAB /* SystemViewController+Extension.swift */,
+				A21E0CEE28A231CD0092EBAB /* DataViewController+Extension.swift */,
+				A21E0CF028A232AF0092EBAB /* WeatherConditionalView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -427,6 +445,8 @@
 				A270FFC52874B5AA000BB264 /* HourlyForecastData.swift in Sources */,
 				A270FFC32874B4E0000BB264 /* FormattedDataType.swift in Sources */,
 				A21E0CCE28A1240F0092EBAB /* SettingsViewCell.swift in Sources */,
+				A21E0CED28A231B20092EBAB /* SystemViewController+Extension.swift in Sources */,
+				A21E0CEF28A231CD0092EBAB /* DataViewController+Extension.swift in Sources */,
 				A270000628762DEC000BB264 /* QueryListForRealm.swift in Sources */,
 				A21E0CE328A12EA40092EBAB /* SettingsViewController.swift in Sources */,
 				A21E0CEB28A168D20092EBAB /* SystemViewController.swift in Sources */,
@@ -445,10 +465,14 @@
 				A270FFFA2875A4AB000BB264 /* ForecastViewController.swift in Sources */,
 				A21E0CE528A1301B0092EBAB /* SettingsViewController+Extension.swift in Sources */,
 				A270000C28763063000BB264 /* AlamofireProvider.swift in Sources */,
+				A21E0CF128A232AF0092EBAB /* WeatherConditionalView+Extensions.swift in Sources */,
 				A21E0CD328A1266D0092EBAB /* WeatherConditionalCell.swift in Sources */,
 				A270FFFE2875A54C000BB264 /* RequestViewController.swift in Sources */,
+				A21E0CF528A2353B0092EBAB /* WeatherConditionals.swift in Sources */,
 				A270000828762E62000BB264 /* CurrentForecastForRealm.swift in Sources */,
+				A21E0CF728A235F20092EBAB /* TypeMode.swift in Sources */,
 				A25B137C28608B2900CB8D52 /* SceneDelegate.swift in Sources */,
+				A21E0CF328A235080092EBAB /* RealmSettings.swift in Sources */,
 				A2F014032876E10200FC6CD7 /* Int+Extension.swift in Sources */,
 				A21E0CE728A167970092EBAB /* DataViewController.swift in Sources */,
 				A2F014012876DDAF00FC6CD7 /* RequestViewController+Extension.swift in Sources */,

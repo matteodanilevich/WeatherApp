@@ -43,4 +43,13 @@ class RealmProvider: RealmProviderProtocol {
         ourRequest.temp = temp
         writeDataToDataBase(name: ourRequest)
     }
+    
+    func formatUpdate(formatedData: Bool) {
+        try! realm.write {
+            guard let settings = getResultForDataBase(objectName: RealmSettings.self).last else {
+                return
+            }
+            settings.formatData = formatedData
+        }
+    }
 }

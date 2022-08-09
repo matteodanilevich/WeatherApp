@@ -25,25 +25,25 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch settingsType(rawValue: indexPath.row) {
         case .requestList:
-            if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RequestViewController") as? RequestViewController {
+            if let viewcontroller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RequestViewController") as? RequestViewController {
                 
-                present(vc, animated: true)
+                present(viewcontroller, animated: true)
             }
         case .dateFormatList:
-            if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DataViewController") as? DataViewController {
+            if let viewcontroller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DataViewController") as? DataViewController {
                 
-                present(vc, animated: true)
+                present(viewcontroller, animated: true)
             }
         case .systemList:
-            if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SystemViewController") as? SystemViewController {
+            if let viewcontroller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SystemViewController") as? SystemViewController {
                 
-                present(vc, animated: true)
+                present(viewcontroller, animated: true)
             }
             
         default:
-            if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WeatherConditionalView") as? WeatherConditionalView {
+            if let viewcontroller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WeatherConditionalView") as? WeatherConditionalView {
               
-                present(vc, animated: true)
+                present(viewcontroller, animated: true)
             }
         }
     }
@@ -51,5 +51,4 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         120
     }
-    
 }
