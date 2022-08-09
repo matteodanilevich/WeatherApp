@@ -37,4 +37,8 @@ class DataViewController: UIViewController {
         let dataFormat = settingList?.formatData
         return dataFormat ?? false
     }
+    
+    @IBAction func closeVcController(_ sender: Any) {
+        dismiss(animated: true)
+    }
 }

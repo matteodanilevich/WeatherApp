@@ -35,14 +35,13 @@ class RealmProvider: RealmProviderProtocol {
         writeDataToDataBase(name: ourRequest)
     }
 
-    func addCurrentForecastToQueryList(time: Int, forecast: String, temp: Double, isCurrentWeather: Bool) {
+    func addCurrentForecastToQueryList(time: Int, forecast: String, temp: Double) {
         
         let ourRequest = CurrentForecastForRealm()
         
         ourRequest.time = time
         ourRequest.forecastDescription = forecast
         ourRequest.temp = temp
-        ourRequest.isCurrentWeather = isCurrentWeather
         writeDataToDataBase(name: ourRequest)
     }
     

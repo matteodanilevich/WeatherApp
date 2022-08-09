@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 
-enum ModeType {
+enum TypeMode {
     
     case navigation
     case selectionCity

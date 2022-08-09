@@ -68,4 +68,8 @@ class RequestViewController: UIViewController {
 
         notificationToken?.invalidate()
     }
+    
+    @IBAction func closeVcController(_ sender: Any) {
+        dismiss(animated: true)
+    }
 }

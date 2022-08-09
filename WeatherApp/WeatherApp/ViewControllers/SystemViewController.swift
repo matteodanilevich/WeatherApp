@@ -26,4 +26,7 @@ class SystemViewController: UIViewController {
     }
     */
 
+    @IBAction func closeVcController(_ sender: Any) {
+        dismiss(animated: true)
+    }
 }
