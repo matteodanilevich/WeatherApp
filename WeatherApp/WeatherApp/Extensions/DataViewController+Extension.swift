@@ -44,5 +44,4 @@ extension DataViewController: UITableViewDelegate, UITableViewDataSource {
         provider.formatUpdate(formatedData: !checkData())
         tableView.reloadData()
     }
-
 }

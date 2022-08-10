@@ -23,7 +23,7 @@ extension HourlyWeatherCell: UICollectionViewDelegate, UICollectionViewDataSourc
             
             cell.currentHour.text = dtArray[indexPath.row].description
             cell.currentWeatherIcon.image = imageArray[indexPath.row]
-            cell.currentTemperature.text = "\(temperatureArray[indexPath.row])°C"
+            cell.currentTemperature.text = "\(temperatureArray[indexPath.row])°"
             
             return cell
         }

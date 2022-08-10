@@ -25,7 +25,7 @@ extension WeatherConditionalView: UITableViewDelegate, UITableViewDataSource {
             let thunderStorm = conditional?.thunder ?? false
             let snow = conditional?.snow ?? false
             
-            switch weatherConditionalTypes(rawValue: indexPath.row) {
+            switch WeatherConditionalTypes(rawValue: indexPath.row) {
                 
             case .rain:
                 conditionalCell.weatherConditionIcon.image = UIImage(systemName: rain ? "circle.fill" : "circle")
@@ -46,7 +46,7 @@ extension WeatherConditionalView: UITableViewDelegate, UITableViewDataSource {
         let thunderStorm = conditional?.thunder ?? false
         let snow = conditional?.snow ?? false
         
-        switch weatherConditionalTypes(rawValue: indexPath.row){
+        switch WeatherConditionalTypes(rawValue: indexPath.row){
             
         case .rain:
             provider.weatherConditionalUpdate(snow: snow, thunder: thunderStorm, rain: !rain)

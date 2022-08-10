@@ -11,6 +11,4 @@ class CustomInfoLabel: UIView {
 
     @IBOutlet weak var temperatureData: UILabel!
     @IBOutlet weak var iconImage: UIImageView!
-    @IBOutlet weak var windSpeed: UILabel!
-
 }

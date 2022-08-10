@@ -227,6 +227,9 @@
                             <constraint firstItem="TMT-t7-iO1" firstAttribute="top" secondItem="aCL-Xf-9Ad" secondAttribute="bottom" id="tec-Hq-69e"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="TMT-t7-iO1" id="w2r-hh-WpV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q17-3y-z0p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

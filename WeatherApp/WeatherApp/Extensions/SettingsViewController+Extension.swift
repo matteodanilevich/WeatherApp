@@ -23,13 +23,14 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch settingsType(rawValue: indexPath.row) {
+        switch SettingsType(rawValue: indexPath.row) {
+            
         case .requestList:
             if let viewcontroller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RequestViewController") as? RequestViewController {
                 
                 present(viewcontroller, animated: true)
             }
-        case .dateFormatList:
+        case .dataFormatList:
             if let viewcontroller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DataViewController") as? DataViewController {
                 
                 present(viewcontroller, animated: true)
@@ -46,9 +47,5 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
                 present(viewcontroller, animated: true)
             }
         }
-    }
-    
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        120
     }
 }

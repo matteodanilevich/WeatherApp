@@ -224,7 +224,6 @@
 				A25B138228608B2A00CB8D52 /* Assets.xcassets */,
 				A270FFF62875A319000BB264 /* Constants */,
 				A270FFDC287556CC000BB264 /* Cells */,
-				A21E0D0928A2B9610092EBAB /* CustomInfoLabel */,
 				A270FFE92875645F000BB264 /* Extensions */,
 				A270000428762DA4000BB264 /* Protocols */,
 				A270000D28763069000BB264 /* Providers */,
@@ -294,6 +293,7 @@
 				A21E0CD028A1241C0092EBAB /* SettingsViewCell */,
 				A21E0CD528A126740092EBAB /* WeatherConditionalCell */,
 				A21E0CDC28A1281E0092EBAB /* DataSettingCell */,
+				A21E0D0928A2B9610092EBAB /* CustomInfoLabel */,
 				A21E0CE128A129B20092EBAB /* SystemSettingsCell */,
 			);
 			path = Cells;

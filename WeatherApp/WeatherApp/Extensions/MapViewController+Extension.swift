@@ -19,11 +19,10 @@ extension MapViewController: GMSMapViewDelegate {
         
         if let infoView = Bundle.main.loadNibNamed("CustomInfoLabel", owner: self, options: nil)?.first as? CustomInfoLabel {
             
-            guard let temperature = temperatureData, let iconImage = iconImage, let windSpeed = windSpeed else { return UIView() }
+            guard let temperature = temperatureData, let iconImage = iconImage else { return UIView() }
             
-            infoView.temperatureData.text = "Temperature: \(temperature)"
+            infoView.temperatureData.text = "\(NSLocalizedString("Temperature", comment: "")): \(temperature)°"
             infoView.iconImage.image = iconImage
-            infoView.windSpeed.text = "Speed Wind: \(windSpeed)"
             return infoView
         }
         return UIView()

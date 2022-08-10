@@ -12,12 +12,11 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var arraySettings: [String]!
     
-    enum settingsType: Int {
+    enum SettingsType: Int {
         case weatherRequestList = 0
         case requestList
         case systemList
-        case dateFormatList
-        
+        case dataFormatList
     }
     
     override func viewDidLoad() {

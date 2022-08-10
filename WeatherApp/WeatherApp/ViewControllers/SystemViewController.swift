@@ -8,24 +8,35 @@
 import UIKit
 
 class SystemViewController: UIViewController {
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    var systemSettingList: [String]!
+    var provider = RealmProvider()
+    
+    enum SystemTypes: Int {
+        
+        case metrical = 0
+        case imperial
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        systemSettingList = ["Metrical system", "Imperial system"]
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        tableView.register(UINib(nibName: "SystemSettingsCell", bundle: nil), forCellReuseIdentifier: SystemSettingsCell.key)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func checkSystemType() -> Bool {
+        let settingList = provider.getResultForDataBase(objectName: RealmSettings.self).last
+        let settingType = settingList?.systemType
+        return settingType ?? false
     }
-    */
-
+    
     @IBAction func closeVcController(_ sender: Any) {
         dismiss(animated: true)
     }

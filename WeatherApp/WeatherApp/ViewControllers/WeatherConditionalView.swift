@@ -16,9 +16,9 @@ class WeatherConditionalView: UIViewController {
     
     let notificationCenter = UNUserNotificationCenter.current()
     
-    enum weatherConditionalTypes: Int {
+    enum WeatherConditionalTypes: Int {
         
-        case rain
+        case rain = 0
         case thunderstorm
         case snow
     }
