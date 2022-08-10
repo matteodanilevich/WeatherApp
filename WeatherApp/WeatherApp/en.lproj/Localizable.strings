@@ -6,9 +6,15 @@
   
 */
 
-"Current weather" = "Current weather";
-"Hourly weather" = "Hourly weather";
-"Daily weather" = "Daily weather";
+"Enter name" = "Enter name";
+"Enter the name of the city" = "Enter the name of the city";
+
+"Place not found" = "Place not found";
+"Weather conditions will worsen soon" = "Weather conditions will worsen soon";
+"Refreshing" = "Refreshing";
+
+"Ok" = "Ok";
+"Cancel" = "Cancel";
 
 "Min" = "Min";
 "Max" = "Max";
@@ -16,28 +22,22 @@
 "Temperature" = "Temperature";
 "Speed Wind" = "Speed Wind";
 
-"Enter the name of the city" = "Enter the name of the city";
-"Enter name" = "Enter name";
-
-"Ok" = "Ok";
-"Cancel" = "Cancel";
-
-"Place not found" = "Place not found";
-"Weather conditions will worsen soon" = "Weather conditions will worsen soon";
-"Refreshing" = "Refreshing";
-"true" = "true";
-"false" = "false";
-
-"thunderstorm" = "thunderstorm";
-"rain" = "rain";
-"snow" = "snow";
+"true" = "True";
+"false" = "False";
 
 "Choice weather conditional" = "Choice weather conditional";
+"rain" = "Rain";
+"thunderstorm" = "Thunderstorm";
+"snow" = "Snow";
+
 "History request" = "History request";
 
-"24-hour format" = "24-hour format";
-"12-hour format" = "12-hour format";
-"System measurement" = "System measurement";
 "Date format" = "Date format";
-"metrical system" = "metrical system";
-"imperial system" = "imperial system";
+"12-hour format" = "12-hour format";
+"24-hour format" = "24-hour format";
+
+"System measurement" = "System measurement";
+"metrical system" = "Metrical system";
+"imperial system" = "Imperial system";
+
+

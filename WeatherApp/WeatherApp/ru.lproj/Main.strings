@@ -1,0 +1,27 @@
+
+/* Class = "UITabBarItem"; title = "Settings"; ObjectID = "5fc-iw-o4J"; */
+"5fc-iw-o4J.title" = "Настройки";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Vgl-7T-hZE"; */
+"Vgl-7T-hZE.normalTitle" = "Кнопка";
+
+/* Class = "UITabBarItem"; title = "Current Weather"; ObjectID = "VxK-fh-oDL"; */
+"VxK-fh-oDL.title" = "Текущая погода";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "aCL-Xf-9Ad"; */
+"aCL-Xf-9Ad.normalTitle" = "Кнопка";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "bZa-yH-9dO"; */
+"bZa-yH-9dO.normalTitle" = "Кнопка";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "cjq-Gj-uhU"; */
+"cjq-Gj-uhU.normalTitle" = "Кнопка";
+
+/* Class = "UITabBarItem"; title = "Weather by map"; ObjectID = "tu9-vt-Q99"; */
+"tu9-vt-Q99.title" = "Погода на карте";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "ubs-IG-Qpa"; */
+"ubs-IG-Qpa.normalTitle" = "Кнопка";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "xhR-2v-3Vs"; */
+"xhR-2v-3Vs.normalTitle" = "Кнопка";
