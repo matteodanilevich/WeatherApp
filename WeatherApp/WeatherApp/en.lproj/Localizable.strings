@@ -22,13 +22,13 @@
 "Temperature" = "Temperature";
 "Speed Wind" = "Speed Wind";
 
-"true" = "True";
-"false" = "False";
+"True" = "True";
+"False" = "False";
 
 "Choice weather conditional" = "Choice weather conditional";
-"rain" = "Rain";
-"thunderstorm" = "Thunderstorm";
-"snow" = "Snow";
+"Rain" = "Rain";
+"Thunderstorm" = "Thunderstorm";
+"Snow" = "Snow";
 
 "History request" = "History request";
 
@@ -37,7 +37,7 @@
 "24-hour format" = "24-hour format";
 
 "System measurement" = "System measurement";
-"metrical system" = "Metrical system";
-"imperial system" = "Imperial system";
+"Metrical system" = "Metrical system";
+"Imperial system" = "Imperial system";
 
 

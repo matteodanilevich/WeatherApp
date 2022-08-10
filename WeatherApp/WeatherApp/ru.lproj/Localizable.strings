@@ -22,13 +22,13 @@
 "Temperature" = "Температура";
 "Speed Wind" = "Скорость ветра";
 
-"true" = "Да";
-"false" = "Нет";
+"True" = "Да";
+"False" = "Нет";
 
 "Choice weather conditional" = "Выберите интересующие погодные условия";
-"rain" = "Дождь";
-"thunderstorm" = "Гроза";
-"snow" = "Снег";
+"Rain" = "Дождь";
+"Thunderstorm" = "Гроза";
+"Snow" = "Снег";
 
 "History request" = "История запросов";
 
@@ -37,5 +37,5 @@
 "24-hour format" = "24-часовой формат";
 
 "System measurement" = "Система измерений";
-"metrical system" = "Метрическая система";
-"imperial system" = "Империалистическая система";
+"Metrical system" = "Метрическая система";
+"Imperial system" = "Империалистическая система";

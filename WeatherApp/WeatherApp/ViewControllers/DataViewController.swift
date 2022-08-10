@@ -23,7 +23,7 @@ class DataViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        dataSettings = ["12-hour format", "24-hour format"]
+        dataSettings = ["24-hour format", "12-hour format"]
         
         tableView.delegate = self
         tableView.dataSource = self
