@@ -16,6 +16,7 @@ class DataViewController: UIViewController {
     var dataSettings: [String]!
     
     enum DataFormat: Int {
+        
         case firstData = 0
         case secondData
     }

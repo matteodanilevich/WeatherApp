@@ -12,6 +12,7 @@ enum FormattedDataType {
 
     case minute
     case hour
+    case secondHour
     case day
     case fullTime
     case customTime
@@ -23,6 +24,8 @@ enum FormattedDataType {
             return "mm"
         case .hour:
             return "hh"
+        case .secondHour:
+            return "HH"
         case .day:
             return "EEE"
         case .fullTime:

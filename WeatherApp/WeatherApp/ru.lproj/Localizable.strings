@@ -10,12 +10,13 @@
 "Enter the name of the city" = "Введите название города";
 
 "Place not found" = "Искомое место на найдено";
-"Weather conditions will worsen soon" = "Погода скоро испортится";
+"Bad weather is coming" = "Погода скоро испортится";
 "Refreshing" = "Обновление данных";
 
 "Ok" = "Окей";
 "Cancel" = "Отмена";
 
+"Now" = "Сейчас";
 "Min" = "Мин";
 "Max" = "Макс";
 

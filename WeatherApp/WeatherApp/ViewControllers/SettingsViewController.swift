@@ -13,6 +13,7 @@ class SettingsViewController: UIViewController {
     var arraySettings: [String]!
     
     enum SettingsType: Int {
+        
         case weatherRequestList = 0
         case requestList
         case systemList

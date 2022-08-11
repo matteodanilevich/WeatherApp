@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A21CA5AC28A391FB006959CC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A21CA5AE28A391FB006959CC /* InfoPlist.strings */; };
+		A21CA5B128A3DB1E006959CC /* ContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21CA5B028A3DB1E006959CC /* ContentType.swift */; };
 		A21E0CCE28A1240F0092EBAB /* SettingsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21E0CCC28A1240E0092EBAB /* SettingsViewCell.swift */; };
 		A21E0CCF28A1240F0092EBAB /* SettingsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A21E0CCD28A1240E0092EBAB /* SettingsViewCell.xib */; };
 		A21E0CD328A1266D0092EBAB /* WeatherConditionalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21E0CD128A1266D0092EBAB /* WeatherConditionalCell.swift */; };
@@ -79,6 +80,7 @@
 		A21CA5A928A39117006959CC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		A21CA5AD28A391FB006959CC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A21CA5AF28A391FD006959CC /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A21CA5B028A3DB1E006959CC /* ContentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentType.swift; sourceTree = "<group>"; };
 		A21E0CCC28A1240E0092EBAB /* SettingsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewCell.swift; sourceTree = "<group>"; };
 		A21E0CCD28A1240E0092EBAB /* SettingsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewCell.xib; sourceTree = "<group>"; };
 		A21E0CD128A1266D0092EBAB /* WeatherConditionalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherConditionalCell.swift; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 				A21E0CF228A235080092EBAB /* RealmSettings.swift */,
 				A21E0CF428A2353A0092EBAB /* WeatherConditionals.swift */,
 				A21E0CF628A235F20092EBAB /* TypeMode.swift */,
+				A21CA5B028A3DB1E006959CC /* ContentType.swift */,
 			);
 			path = Structure;
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 				A21E0CE328A12EA40092EBAB /* SettingsViewController.swift in Sources */,
 				A21E0CEB28A168D20092EBAB /* SystemViewController.swift in Sources */,
 				A270FFF82875A335000BB264 /* Constants.swift in Sources */,
+				A21CA5B128A3DB1E006959CC /* ContentType.swift in Sources */,
 				A270000128762C3D000BB264 /* APIProviderProtocol.swift in Sources */,
 				A270FFF128758D37000BB264 /* RequestDataCell.swift in Sources */,
 				A270000A28763053000BB264 /* RealmProvider.swift in Sources */,

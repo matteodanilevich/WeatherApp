@@ -10,12 +10,13 @@
 "Enter the name of the city" = "Enter the name of the city";
 
 "Place not found" = "Place not found";
-"Weather conditions will worsen soon" = "Weather conditions will worsen soon";
+"Bad weather is coming" = "Bad weather is coming";
 "Refreshing" = "Refreshing";
 
 "Ok" = "Ok";
 "Cancel" = "Cancel";
 
+"Now" = "Now";
 "Min" = "Min";
 "Max" = "Max";
 

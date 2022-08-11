@@ -22,17 +22,17 @@ extension WeatherConditionalView: UITableViewDelegate, UITableViewDataSource {
             
             let conditional = provider.getResultForDataBase(objectName: WeatherConditional.self).last
             let rain = conditional?.rain ?? false
-            let thunderStorm = conditional?.thunder ?? false
+            let thunder = conditional?.thunderStorm ?? false
             let snow = conditional?.snow ?? false
             
             switch WeatherConditionalTypes(rawValue: indexPath.row) {
                 
+            case .thunder:
+                conditionalCell.weatherConditionIcon.image = UIImage(systemName: thunder ? "circle.fill" : "circle")
             case .rain:
                 conditionalCell.weatherConditionIcon.image = UIImage(systemName: rain ? "circle.fill" : "circle")
-            case .snow:
-                conditionalCell.weatherConditionIcon.image = UIImage(systemName: snow ? "circle.fill" : "circle")
             default:
-                conditionalCell.weatherConditionIcon.image = UIImage(systemName: thunderStorm ? "circle.fill" : "circle")
+                conditionalCell.weatherConditionIcon.image = UIImage(systemName: snow ? "circle.fill" : "circle")
             }
             return conditionalCell
         }
@@ -43,17 +43,17 @@ extension WeatherConditionalView: UITableViewDelegate, UITableViewDataSource {
         
         let conditional = provider.getResultForDataBase(objectName: WeatherConditional.self).last
         let rain = conditional?.rain ?? false
-        let thunderStorm = conditional?.thunder ?? false
+        let thunder = conditional?.thunderStorm ?? false
         let snow = conditional?.snow ?? false
         
         switch WeatherConditionalTypes(rawValue: indexPath.row){
             
+        case .thunder:
+            provider.weatherConditionalUpdate(snow: snow, thunder: !thunder, rain: rain)
         case .rain:
-            provider.weatherConditionalUpdate(snow: snow, thunder: thunderStorm, rain: !rain)
-        case .snow:
-            provider.weatherConditionalUpdate(snow: !snow, thunder: thunderStorm, rain: rain)
+            provider.weatherConditionalUpdate(snow: snow, thunder: thunder, rain: !rain)
         default:
-            provider.weatherConditionalUpdate(snow: snow, thunder: !thunderStorm, rain: rain)
+            provider.weatherConditionalUpdate(snow: !snow, thunder: thunder, rain: rain)
         }
         
         tableView.reloadData()

@@ -12,7 +12,6 @@ import UIKit
 enum TypeMode {
     
     case navigation
-    case selectionCity
+    case citySelect
     case none
-    
 }

@@ -32,6 +32,7 @@ class RealmProvider: RealmProviderProtocol {
         ourRequest.latitude = lat
         ourRequest.longitude = lon
         ourRequest.currentForecast = getResultForDataBase(objectName: CurrentForecastForRealm.self).last
+        
         writeDataToDataBase(name: ourRequest)
     }
 
@@ -42,6 +43,7 @@ class RealmProvider: RealmProviderProtocol {
         ourRequest.time = time
         ourRequest.forecastDescription = forecast
         ourRequest.temp = temp
+        
         writeDataToDataBase(name: ourRequest)
     }
     
@@ -52,6 +54,7 @@ class RealmProvider: RealmProviderProtocol {
         systemSettings.systemType = systemType
         systemSettings.formatData = formatData
         systemSettings.weatherConditional = getResultForDataBase(objectName: WeatherConditional.self).last
+        
         writeDataToDataBase(name: systemSettings)
     }
     
@@ -60,15 +63,16 @@ class RealmProvider: RealmProviderProtocol {
         let weatherRequest = WeatherConditional()
         
         weatherRequest.snow = snow
-        weatherRequest.thunder = thunder
+        weatherRequest.thunderStorm = thunder
         weatherRequest.rain = rain
+        
+        writeDataToDataBase(name: weatherRequest)
     }
     
     func formatUpdate(formatedData: Bool) {
         try! realm.write {
-            guard let settingProperties = getResultForDataBase(objectName: RealmSettings.self).last else {
-                return
-            }
+            guard let settingProperties = getResultForDataBase(objectName: RealmSettings.self).last else { return }
+            
             settingProperties.formatData = formatedData
         }
     }
@@ -76,9 +80,7 @@ class RealmProvider: RealmProviderProtocol {
     func systemUpdate(formatedData: Bool) {
         
         try! realm.write {
-            guard let settingProperties = getResultForDataBase(objectName: RealmSettings.self).last else {
-                return
-            }
+            guard let settingProperties = getResultForDataBase(objectName: RealmSettings.self).last else { return }
             
             settingProperties.systemType = formatedData
         }
@@ -87,12 +89,10 @@ class RealmProvider: RealmProviderProtocol {
     func weatherConditionalUpdate(snow: Bool, thunder: Bool, rain: Bool) {
         
         try! realm.write {
-            guard let settingProperties = getResultForDataBase(objectName: RealmSettings.self).last, let weatherConditional = settingProperties.weatherConditional else {
-                return
-            }
+            guard let settingProperties = getResultForDataBase(objectName: RealmSettings.self).last, let weatherConditional = settingProperties.weatherConditional else { return }
             
             weatherConditional.snow = snow
-            weatherConditional.thunder = thunder
+            weatherConditional.thunderStorm = thunder
             weatherConditional.rain = rain
         }
     }

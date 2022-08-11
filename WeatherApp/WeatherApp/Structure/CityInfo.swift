@@ -11,7 +11,7 @@ import Foundation
 struct CityInfo: Codable {
     
     let name: String
-    let localNames: [String: String]?
+    let localNames: [String: String]
     let lat, lon: Double
     let country, state: String?
 

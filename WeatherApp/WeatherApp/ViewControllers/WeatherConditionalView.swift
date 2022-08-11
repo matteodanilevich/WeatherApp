@@ -18,8 +18,8 @@ class WeatherConditionalView: UIViewController {
     
     enum WeatherConditionalTypes: Int {
         
-        case rain = 0
-        case thunderstorm
+        case thunder = 0
+        case rain
         case snow
     }
     
@@ -27,14 +27,13 @@ class WeatherConditionalView: UIViewController {
         
         super.viewDidLoad()
 
-        weatherConditionalList = ["Rain", "ThunderStorm", "Snow"]
+        weatherConditionalList = ["Thunderstorm", "Rain", "Snow"]
         
         tableView.delegate = self
         tableView.dataSource = self
         
         tableView.register(UINib(nibName: "WeatherConditionalCell", bundle: nil), forCellReuseIdentifier: WeatherConditionalCell.key)
     }
-    
     
     @IBAction func closeVcController(_ sender: Any) {
         dismiss(animated: true)
