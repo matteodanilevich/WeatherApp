@@ -10,7 +10,7 @@ import Foundation
 // MARK: - ForecastData
 //Использование протокола Codable, позволяющего конвертировать данные в/из JSON
 struct ForecastData: Codable {
-    
+
     var lat: Double?
     var lon: Double?
     var timeZone: String?
@@ -21,7 +21,7 @@ struct ForecastData: Codable {
 
     //Постановка соответствий ключей JSON и свойств структуры
     enum CodingKeys: String, CodingKey {
-        
+
         case timeZone = "timezone"
         case timeZoneOffset = "timezone_offset"
         case lat, lon, current
@@ -31,7 +31,7 @@ struct ForecastData: Codable {
 
 // MARK: - CurrentForecastData
 struct CurrentForecastData: Codable {
-    
+
     var dt: Int?
     var sunrise: Int?
     var sunset: Int?
@@ -47,9 +47,9 @@ struct CurrentForecastData: Codable {
     var windDeg: Int?
     var windGust: Double?
     var weather: [Forecast]?
-    
+
     enum CodingKeys: String, CodingKey {
-        
+
         case feelsLike = "feels_like"
         case dewPoint = "dew_point"
         case windSpeed = "wind_speed"
@@ -61,7 +61,7 @@ struct CurrentForecastData: Codable {
 
 // MARK: - Forecast
 struct Forecast: Codable {
-    
+
     var id: Int?
     var main: String?
     var description: String?

@@ -10,10 +10,10 @@ import UIKit
 class SystemSettingsCell: UITableViewCell {
 
     static let key = "SystemSettingsCell"
-    
+
     @IBOutlet weak var systemSettingsName: UILabel!
     @IBOutlet weak var systemSettingsIcon: UIImageView!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -24,5 +24,5 @@ class SystemSettingsCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
 }

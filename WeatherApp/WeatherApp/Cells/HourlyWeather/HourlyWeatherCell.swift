@@ -10,21 +10,21 @@ import UIKit
 class HourlyWeatherCell: UITableViewCell {
 
     @IBOutlet weak var collectionWeatherCell: UICollectionView!
-    
+
     static let key = "HourlyWeatherCell"
-    
+
     var dtArray: [String]!
     var imageArray: [UIImage]!
     var temperatureArray: [Double]!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+
         collectionWeatherCell.delegate = self
         collectionWeatherCell.dataSource = self
-        
+
         collectionWeatherCell.register(UINib(nibName: "HourlyWeatherCollectionCell", bundle: nil), forCellWithReuseIdentifier: HourlyWeatherCollectionCell.key)
-        
+
         //Make invisable selection
         selectionStyle = .none
     }
@@ -34,5 +34,5 @@ class HourlyWeatherCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
 }

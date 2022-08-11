@@ -13,13 +13,13 @@ class CurrentWeatherCell: UITableViewCell {
     @IBOutlet weak var currentTemperature: UILabel!
     @IBOutlet weak var currentSky: UILabel!
     @IBOutlet weak var currentTemperatureExtremum: UILabel!
-    
+
     static let key = "CurrentWeatherCell"
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
+
         //Make invisable selection
         selectionStyle = .none
     }
@@ -29,5 +29,5 @@ class CurrentWeatherCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
 }

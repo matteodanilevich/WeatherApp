@@ -9,24 +9,24 @@ import Foundation
 import UIKit
 
 extension WeatherConditionalView: UITableViewDelegate, UITableViewDataSource {
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         weatherConditionalList.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+
         if let conditionalCell = tableView.dequeueReusableCell(withIdentifier: WeatherConditionalCell.key) as? WeatherConditionalCell {
-            
+
             conditionalCell.weatherConditionName.text = NSLocalizedString(weatherConditionalList[indexPath.row], comment: "")
-            
+
             let conditional = provider.getResultForDataBase(objectName: WeatherConditional.self).last
             let rain = conditional?.rain ?? false
             let thunder = conditional?.thunderStorm ?? false
             let snow = conditional?.snow ?? false
-            
+
             switch WeatherConditionalTypes(rawValue: indexPath.row) {
-                
+
             case .thunder:
                 conditionalCell.weatherConditionIcon.image = UIImage(systemName: thunder ? "circle.fill" : "circle")
             case .rain:
@@ -38,16 +38,16 @@ extension WeatherConditionalView: UITableViewDelegate, UITableViewDataSource {
         }
         return UITableViewCell()
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+
         let conditional = provider.getResultForDataBase(objectName: WeatherConditional.self).last
         let rain = conditional?.rain ?? false
         let thunder = conditional?.thunderStorm ?? false
         let snow = conditional?.snow ?? false
-        
-        switch WeatherConditionalTypes(rawValue: indexPath.row){
-            
+
+        switch WeatherConditionalTypes(rawValue: indexPath.row) {
+
         case .thunder:
             provider.weatherConditionalUpdate(snow: snow, thunder: !thunder, rain: rain)
         case .rain:
@@ -55,7 +55,7 @@ extension WeatherConditionalView: UITableViewDelegate, UITableViewDataSource {
         default:
             provider.weatherConditionalUpdate(snow: !snow, thunder: thunder, rain: rain)
         }
-        
+
         tableView.reloadData()
         notificationCenter.removeAllPendingNotificationRequests()
     }

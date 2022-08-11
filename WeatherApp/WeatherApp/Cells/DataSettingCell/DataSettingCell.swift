@@ -10,10 +10,10 @@ import UIKit
 class DataSettingCell: UITableViewCell {
 
     static let key = "DataSettingCell"
-    
+
     @IBOutlet weak var dataSettingName: UILabel!
     @IBOutlet weak var dataSettingIcon: UIImageView!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -24,5 +24,5 @@ class DataSettingCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
 }

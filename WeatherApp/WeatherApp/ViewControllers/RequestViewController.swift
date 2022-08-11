@@ -14,7 +14,7 @@ class RequestViewController: UIViewController {
 
     var realmProvider: RealmProviderProtocol!
     private var notificationToken: NotificationToken?
-    
+
     var refreshControl: UIRefreshControl!
 
     override func viewDidLoad() {
@@ -27,13 +27,13 @@ class RequestViewController: UIViewController {
         tableViewForRequestedData.dataSource = self
 
         tableViewForRequestedData.register(UINib(nibName: "RequestDataCell", bundle: nil), forCellReuseIdentifier: RequestDataCell.key)
-        
+
         //Add refreshControl
         refreshControl = UIRefreshControl()
         tableViewForRequestedData.refreshControl = refreshControl
         refreshControl.attributedTitle = NSAttributedString(string: "Refreshing data table")
         refreshControl.addTarget(self, action: #selector(refreshTable), for: .valueChanged)
-        
+
         let data = realmProvider.getResultForDataBase(objectName: QueryListForRealm.self)
 
         notificationToken = data.observe { [weak self] (changes: RealmCollectionChange) in
@@ -55,20 +55,20 @@ class RequestViewController: UIViewController {
 
     //Func for refresh Table
     @objc private func refreshTable() {
-        
+
         tableViewForRequestedData.reloadData()
-        
+
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
 
             self.refreshControl.endRefreshing()
         }
     }
-    
+
     deinit {
 
         notificationToken?.invalidate()
     }
-    
+
     @IBAction func closeVcController(_ sender: Any) {
         dismiss(animated: true)
     }

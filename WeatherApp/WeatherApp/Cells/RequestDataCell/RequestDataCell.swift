@@ -14,13 +14,13 @@ class RequestDataCell: UITableViewCell {
     @IBOutlet weak var requestLongitude: UILabel!
     @IBOutlet weak var requestWeather: UILabel!
     @IBOutlet weak var requestTemperature: UILabel!
-    
+
     static let key = "RequestDataCell"
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
+
         //Make invisable selection
         selectionStyle = .none
     }
@@ -30,5 +30,5 @@ class RequestDataCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
 }

@@ -18,7 +18,7 @@ enum FormattedDataType {
     case customTime
 
     var description: String {
-        
+
         switch self {
         case .minute:
             return "mm"

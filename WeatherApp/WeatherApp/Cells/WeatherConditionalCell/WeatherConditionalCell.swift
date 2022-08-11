@@ -10,10 +10,10 @@ import UIKit
 class WeatherConditionalCell: UITableViewCell {
 
     static let key = "WeatherConditionalCell"
-    
+
     @IBOutlet weak var weatherConditionName: UILabel!
     @IBOutlet weak var weatherConditionIcon: UIImageView!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -24,5 +24,5 @@ class WeatherConditionalCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
 }

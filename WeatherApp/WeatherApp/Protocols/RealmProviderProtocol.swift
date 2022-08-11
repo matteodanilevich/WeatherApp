@@ -9,7 +9,7 @@ import Foundation
 import RealmSwift
 
 protocol RealmProviderProtocol {
-    
+
     func writeDataToDataBase(name: Object)
     func getResultForDataBase<T: RealmFetchable>(objectName: T.Type) -> Results<T>
     func addCoordinatesToQueryList(time: Int, lat: Double, lon: Double)

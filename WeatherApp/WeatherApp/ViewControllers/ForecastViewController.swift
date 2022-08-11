@@ -67,7 +67,7 @@ class ForecastViewController: UIViewController {
             }
         }
     }
-    
+
     let userNotificationCenter = UNUserNotificationCenter.current()
 
     private var apiProvider: APIProviderProtocol!
@@ -76,7 +76,7 @@ class ForecastViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         apiProvider = AlamofireProvider()
         realmProvider = RealmProvider()
 
@@ -113,9 +113,8 @@ class ForecastViewController: UIViewController {
         coreManager.delegate = self
         blurVisualEffect.isHidden = false
         loadIndicator.startAnimating()
-        
+
         //MARK: City name
-//        nameOfCity = "Minsk"
         if Locale.preferredLanguages.first == "ru" {
             nameOfCity = "Минск"
         } else {
@@ -134,7 +133,7 @@ class ForecastViewController: UIViewController {
         tableViewForWeatherData.register(UINib(nibName: "CurrentWeatherCell", bundle: nil), forCellReuseIdentifier: CurrentWeatherCell.key)
         tableViewForWeatherData.register(UINib(nibName: "HourlyWeatherCell", bundle: nil), forCellReuseIdentifier: HourlyWeatherCell.key)
         tableViewForWeatherData.register(UINib(nibName: "DailyWeatherCell", bundle: nil), forCellReuseIdentifier: DailyWeatherCell.key)
-        
+
         userNotificationCenter.removeAllPendingNotificationRequests()
 
         //Call function
@@ -256,7 +255,7 @@ class ForecastViewController: UIViewController {
                 let thunderstorm = 200...299
                 let rain = 500...599
                 let snow = 600...699
-                
+
                 self.arrayForHourlyDt.removeAll()
                 self.arrayForHourlyTemp.removeAll()
                 self.arrayForHourlyForecastImage.removeAll()
@@ -323,7 +322,7 @@ class ForecastViewController: UIViewController {
                             print("Error")
                         }
                     }
-                    
+
                     self.arrayForDailyMinTemp.append(minTemperature)
                     self.arrayForDailyMaxTemp.append(maxTemperature)
                     self.arrayForDailyDt.append(dailyDt.convertDataTime(.day))

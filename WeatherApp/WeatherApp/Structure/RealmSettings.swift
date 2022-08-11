@@ -9,7 +9,7 @@ import Foundation
 import RealmSwift
 
 class RealmSettings: Object {
-    
+
     @objc dynamic var formatData: Bool = true
     @objc dynamic var systemType: Bool = true
     @objc dynamic var weatherConditional: WeatherConditional?

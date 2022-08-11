@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - HourlyForecastData
 struct HourlyForecastData: Codable {
-    
+
     var dt: Int?
     var temp: Double?
     var feelsLike: Double?
@@ -24,9 +24,9 @@ struct HourlyForecastData: Codable {
     var windGust: Double?
     var weather: [HourlyForecast]?
     var pop: Double?
-    
+
     enum CodingKeys: String, CodingKey {
-        
+
         case feelsLike = "feels_like"
         case dewPoint = "dew_point"
         case windSpeed = "wind_speed"
@@ -38,7 +38,7 @@ struct HourlyForecastData: Codable {
 
 // MARK: - HourlyForecast
 struct HourlyForecast: Codable {
-    
+
     var id: Int?
     var main: String?
     var description: String?
