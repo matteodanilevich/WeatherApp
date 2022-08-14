@@ -26,14 +26,14 @@
 "True" = "True";
 "False" = "False";
 
-"Choice weather conditional" = "Choice weather conditional";
+"Choose weather conditional" = "Choose weather conditional";
 "Rain" = "Rain";
 "Thunderstorm" = "Thunderstorm";
 "Snow" = "Snow";
 
 "History request" = "History request";
 
-"Date format" = "Date format";
+"Data format" = "Data format";
 "12-hour format" = "12-hour format";
 "24-hour format" = "24-hour format";
 

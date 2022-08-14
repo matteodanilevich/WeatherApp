@@ -26,14 +26,14 @@
 "True" = "Да";
 "False" = "Нет";
 
-"Choice weather conditional" = "Выберите интересующие погодные условия";
+"Choose weather conditional" = "Выберите погодные условия";
 "Rain" = "Дождь";
 "Thunderstorm" = "Гроза";
 "Snow" = "Снег";
 
 "History request" = "История запросов";
 
-"Date format" = "Часовой формат";
+"Data format" = "Часовой формат";
 "12-hour format" = "12-часовой формат";
 "24-hour format" = "24-часовой формат";
 

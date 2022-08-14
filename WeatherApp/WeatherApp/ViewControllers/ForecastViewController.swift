@@ -115,10 +115,9 @@ class ForecastViewController: UIViewController {
         loadIndicator.startAnimating()
 
         //MARK: City name
+        nameOfCity = "Minsk"
         if Locale.preferredLanguages.first == "ru" {
             nameOfCity = "Минск"
-        } else {
-            nameOfCity = "Minsk"
         }
 
         blurVisualEffect.isHidden = false
@@ -292,6 +291,19 @@ class ForecastViewController: UIViewController {
 
                         self.arrayForHourlyBadWeatherDt.append(hourlyDt - 60 * 30)
                     }
+//                    guard let conditional = self.realmProvider.getResultForDataBase(objectName: WeatherConditional.self).last else { return }
+//
+//                    if conditional.thunderStorm && thunderstorm.contains(weatherId) {
+//                        self.arrayForHourlyBadWeatherDt.append(hourlyDt - 60 * 30)
+//                    }
+//
+//                    if conditional.rain && rain.contains(weatherId) {
+//                        self.arrayForHourlyBadWeatherDt.append(hourlyDt - 60 * 30)
+//                    }
+//
+//                    if conditional.snow && snow.contains(weatherId) {
+//                        self.arrayForHourlyBadWeatherDt.append(hourlyDt - 60 * 30)
+//                    }
                 }
 
                 self.sendWeatherNotifications(arrayTime: self.arrayForHourlyBadWeatherDt)
@@ -345,7 +357,7 @@ class ForecastViewController: UIViewController {
         self.loadIndicator.startAnimating()
 
         self.nameOfCity = currentLocationName
-        getWeatherForCityByCoordinates(cityLat: Double(currentLocationCoordinate.latitude), cityLon: Double(currentLocationCoordinate.longitude))
+        self.getWeatherForCityByCoordinates(cityLat: Double(currentLocationCoordinate.latitude), cityLon: Double(currentLocationCoordinate.longitude))
     }
 
     private func sendWeatherNotifications(arrayTime: [Int]) {

@@ -41,7 +41,7 @@ extension ForecastViewController: UITableViewDelegate, UITableViewDataSource {
 
                 guard let cityName = nameOfCity, let temp = currentTemperature, let forecast = currentForecast, let minTemp = arrayForDailyMinTemp.min(), let maxTemp = arrayForDailyMaxTemp.max() else { return tableCell }
 
-                tableCell.cityName.text = cityName
+                tableCell.cityName.text = NSLocalizedString(cityName, comment: "")
                 tableCell.currentTemperature.text = "\(NSLocalizedString("Now", comment: "")): \(Int(temp))°"
                 tableCell.currentSky.text = forecast
                 tableCell.currentTemperatureExtremum.text = "\(NSLocalizedString("Min", comment: "")): \(Int(minTemp))°, \(NSLocalizedString("Max", comment: "")): \(Int(maxTemp))°"
@@ -65,7 +65,7 @@ extension ForecastViewController: UITableViewDelegate, UITableViewDataSource {
 
             if let tableCell = tableView.dequeueReusableCell(withIdentifier: DailyWeatherCell.key) as? DailyWeatherCell {
 
-                tableCell.currentDate.text = "\(arrayForDailyDt[indexPath.row])"
+                tableCell.currentDate.text = NSLocalizedString(arrayForDailyDt[indexPath.row], comment: "")
                 tableCell.weatherIcon.image = arrayForDailyForecastImage[indexPath.row]
                 tableCell.minTemperature.text = "\(NSLocalizedString("Min", comment: "")): \(Int(arrayForDailyMinTemp[indexPath.row]))°"
                 tableCell.maxTemperature.text = "\(NSLocalizedString("Max", comment: "")): \(Int(arrayForDailyMaxTemp[indexPath.row]))°"

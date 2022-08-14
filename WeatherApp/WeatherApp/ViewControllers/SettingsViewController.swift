@@ -23,7 +23,7 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        arraySettings = ["Choose weather conditional", "History request", "Weather measurement", "Data format"]
+        arraySettings = ["Choose weather conditional", "History request", "System measurement", "Data format"]
         tableView.delegate = self
         tableView.dataSource = self
 
