@@ -91,7 +91,7 @@ class ForecastViewController: UIViewController {
         let thunder = weatherConditionals?.thunderStorm ?? false
         let snow = weatherConditionals?.snow ?? false
 
-        realmProvider.weatherConditionalUpdate(snow: snow, thunder: thunder, rain: rain)
+        realmProvider.addWeatherConditional(snow: snow, thunder: thunder, rain: rain)
         realmProvider.addSettingsProperties(systemType: systemList, formatData: dataFormat)
 
         guard let settingsList = realmProvider.getResultForDataBase(objectName: RealmSettings.self).last else { return }
@@ -287,25 +287,19 @@ class ForecastViewController: UIViewController {
                     self.arrayForHourlyTemp.append(hourlyTemp)
 
                     //Data for notification
-                    //Затычка
-                    if thunderstorm.contains(weatherId) || rain.contains(weatherId) || snow.contains(weatherId) {
+                    guard let conditional = self.realmProvider.getResultForDataBase(objectName: WeatherConditional.self).last else { return }
 
+                    if conditional.thunderStorm && thunderstorm.contains(weatherId) {
                         self.arrayForHourlyBadWeatherDt.append(hourlyDt - 60 * 30)
                     }
-                    //MARK: Проскакивает проверку
-//                    guard let conditional = self.realmProvider.getResultForDataBase(objectName: WeatherConditional.self).last else { return }
-//
-//                    if conditional.thunderStorm && thunderstorm.contains(weatherId) {
-//                        self.arrayForHourlyBadWeatherDt.append(hourlyDt - 60 * 30)
-//                    }
-//
-//                    if conditional.rain && rain.contains(weatherId) {
-//                        self.arrayForHourlyBadWeatherDt.append(hourlyDt - 60 * 30)
-//                    }
-//
-//                    if conditional.snow && snow.contains(weatherId) {
-//                        self.arrayForHourlyBadWeatherDt.append(hourlyDt - 60 * 30)
-//                    }
+
+                    if conditional.rain && rain.contains(weatherId) {
+                        self.arrayForHourlyBadWeatherDt.append(hourlyDt - 60 * 30)
+                    }
+
+                    if conditional.snow && snow.contains(weatherId) {
+                        self.arrayForHourlyBadWeatherDt.append(hourlyDt - 60 * 30)
+                    }
                 }
 
                 self.sendWeatherNotifications(arrayTime: self.arrayForHourlyBadWeatherDt)
