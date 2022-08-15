@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="DataSettingCell" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="DataSettingCell" customModule="WeatherApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5a8-am-PYI">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wYz-9t-FmV">
+                        <rect key="frame" x="240" y="0.0" width="80" height="44"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="wYz-9t-FmV" firstAttribute="leading" secondItem="5a8-am-PYI" secondAttribute="trailing" id="8WX-8B-ZZL"/>
+                    <constraint firstAttribute="bottom" secondItem="wYz-9t-FmV" secondAttribute="bottom" id="Dwk-ti-fhY"/>
+                    <constraint firstItem="wYz-9t-FmV" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.25" id="K3m-dF-aaA"/>
+                    <constraint firstAttribute="bottom" secondItem="5a8-am-PYI" secondAttribute="bottom" id="Slv-Ru-Fos"/>
+                    <constraint firstItem="wYz-9t-FmV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="bm5-zR-ERj"/>
+                    <constraint firstItem="5a8-am-PYI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="pEr-iC-f45"/>
+                    <constraint firstAttribute="trailing" secondItem="wYz-9t-FmV" secondAttribute="trailing" id="svl-3d-0ZZ"/>
+                    <constraint firstItem="5a8-am-PYI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="vLv-FS-c6u"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="dataSettingIcon" destination="wYz-9t-FmV" id="ymu-FC-nDu"/>
+                <outlet property="dataSettingName" destination="5a8-am-PYI" id="xe6-Ey-jVp"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -13,13 +13,13 @@ class DailyWeatherCell: UITableViewCell {
     @IBOutlet weak var weatherIcon: UIImageView!
     @IBOutlet weak var minTemperature: UILabel!
     @IBOutlet weak var maxTemperature: UILabel!
-    
+
     static let key = "DailyWeatherCell"
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
+
         //Make invisable selection
         selectionStyle = .none
     }
@@ -29,5 +29,5 @@ class DailyWeatherCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
 }

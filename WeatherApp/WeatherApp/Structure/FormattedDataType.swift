@@ -12,17 +12,20 @@ enum FormattedDataType {
 
     case minute
     case hour
+    case secondHour
     case day
     case fullTime
     case customTime
 
     var description: String {
-        
+
         switch self {
         case .minute:
             return "mm"
         case .hour:
             return "hh"
+        case .secondHour:
+            return "HH"
         case .day:
             return "EEE"
         case .fullTime:

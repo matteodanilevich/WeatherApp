@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  WeatherApp
+
+  Created by Mateo Danilevich on 8/10/22.
+  
+*/
+
+"NSLocationWhenInUseUsageDescription" = "Description of usage";
+"CFBundleDisplayName" = "Weather";

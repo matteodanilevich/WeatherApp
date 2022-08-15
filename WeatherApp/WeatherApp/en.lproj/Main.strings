@@ -1,0 +1,27 @@
+
+/* Class = "UITabBarItem"; title = "Settings"; ObjectID = "5fc-iw-o4J"; */
+"5fc-iw-o4J.title" = "Settings";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Vgl-7T-hZE"; */
+"Vgl-7T-hZE.normalTitle" = "Button";
+
+/* Class = "UITabBarItem"; title = "Current Weather"; ObjectID = "VxK-fh-oDL"; */
+"VxK-fh-oDL.title" = "Current Weather";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "aCL-Xf-9Ad"; */
+"aCL-Xf-9Ad.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "bZa-yH-9dO"; */
+"bZa-yH-9dO.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "cjq-Gj-uhU"; */
+"cjq-Gj-uhU.normalTitle" = "Button";
+
+/* Class = "UITabBarItem"; title = "Weather by map"; ObjectID = "tu9-vt-Q99"; */
+"tu9-vt-Q99.title" = "Weather by map";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "ubs-IG-Qpa"; */
+"ubs-IG-Qpa.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "xhR-2v-3Vs"; */
+"xhR-2v-3Vs.normalTitle" = "Button";

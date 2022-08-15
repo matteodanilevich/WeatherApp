@@ -1,0 +1,42 @@
+/* 
+  Localizable.strings
+  WeatherApp
+
+  Created by Mateo Danilevich on 8/9/22.
+  
+*/
+
+"Enter name" = "Введите название";
+"Enter the name of the city" = "Введите название города";
+
+"Place not found" = "Искомое место на найдено";
+"Bad weather is coming" = "Погода скоро испортится";
+"Refreshing" = "Обновление данных";
+
+"Ok" = "Окей";
+"Cancel" = "Отмена";
+
+"Now" = "Сейчас";
+"Min" = "Мин";
+"Max" = "Макс";
+
+"Temperature" = "Тем";
+"Speed Wind" = "Скорость ветра";
+
+"True" = "Да";
+"False" = "Нет";
+
+"Choose weather conditional" = "Выберите погодные условия";
+"Rain" = "Дождь";
+"Thunderstorm" = "Гроза";
+"Snow" = "Снег";
+
+"History request" = "История запросов";
+
+"Data format" = "Часовой формат";
+"12-hour format" = "12-часовой формат";
+"24-hour format" = "24-часовой формат";
+
+"System measurement" = "Система измерений";
+"Metrical system" = "Метрическая система";
+"Imperial system" = "Империалистическая система";
