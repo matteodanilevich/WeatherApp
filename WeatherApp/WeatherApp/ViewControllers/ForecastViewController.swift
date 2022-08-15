@@ -196,9 +196,9 @@ class ForecastViewController: UIViewController {
 
         guard let nameOfCity = nameOfCity else { return }
 
-        var language = "en"
+        var lang = "en"
         if let preferredLanguage = Locale.preferredLanguages.first, preferredLanguage == "ru" {
-            language = preferredLanguage
+            lang = preferredLanguage
         }
 
         apiProvider.getCoordinatesByName(name: nameOfCity) { [weak self] resultData in
@@ -208,7 +208,7 @@ class ForecastViewController: UIViewController {
             switch resultData {
 
             case .success(let cityValue):
-                if let city = cityValue.first, let localCityName = city.localNames[language] {
+                if let city = cityValue.first, let localCityName = city.localNames[lang] {
 
                     self.nameOfCity = localCityName
                     self.getWeatherForCityByCoordinates(cityLat: city.lat, cityLon: city.lon)
@@ -245,7 +245,7 @@ class ForecastViewController: UIViewController {
 
                 let currentDate = Int(Date().timeIntervalSince1970)
 
-                self.realmProvider.addCurrentForecastToQueryList(time: currentDate, forecast: cloudsState, temp: temperature)
+                self.realmProvider.addCurrentForecastToQueryList(time: currentDate, forecast: cloudsState, temp: temperature, isCurrentWeather: true)
                 self.realmProvider.addCoordinatesToQueryList(time: currentDate, lat: lat, lon: lon)
 
                 //MARK: Hourly weather
@@ -283,14 +283,16 @@ class ForecastViewController: UIViewController {
                     let dataFormating = settingsList?.formatData ?? false
 
                     //Add data to array
-                    self.arrayForHourlyDt.append(hourlyDt.convertDataTime(dataFormating ? .secondHour : .hour))
+                    self.arrayForHourlyDt.append(hourlyDt.convertDataTime(formattedDataType: dataFormating ? .secondHour : .hour))
                     self.arrayForHourlyTemp.append(hourlyTemp)
 
                     //Data for notification
+                    //Затычка
                     if thunderstorm.contains(weatherId) || rain.contains(weatherId) || snow.contains(weatherId) {
 
                         self.arrayForHourlyBadWeatherDt.append(hourlyDt - 60 * 30)
                     }
+                    //MARK: Проскакивает проверку
 //                    guard let conditional = self.realmProvider.getResultForDataBase(objectName: WeatherConditional.self).last else { return }
 //
 //                    if conditional.thunderStorm && thunderstorm.contains(weatherId) {
@@ -337,7 +339,7 @@ class ForecastViewController: UIViewController {
 
                     self.arrayForDailyMinTemp.append(minTemperature)
                     self.arrayForDailyMaxTemp.append(maxTemperature)
-                    self.arrayForDailyDt.append(dailyDt.convertDataTime(.day))
+                    self.arrayForDailyDt.append(dailyDt.convertDataTime(formattedDataType: .day))
                 }
 
                 //Update Data in tableView
@@ -369,8 +371,8 @@ class ForecastViewController: UIViewController {
 
         var data = DateComponents()
 
-        data.minute = Int(time.convertDataTime(.minute))
-        data.hour = Int(time.convertDataTime(.hour))
+        data.minute = Int(time.convertDataTime(formattedDataType: .minute))
+        data.hour = Int(time.convertDataTime(formattedDataType: .hour))
 
         let calendarTrigger = UNCalendarNotificationTrigger(dateMatching: data, repeats: false)
         let indentifier = String(time)

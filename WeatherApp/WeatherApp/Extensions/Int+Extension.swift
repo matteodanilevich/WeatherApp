@@ -9,7 +9,7 @@ import Foundation
 
 extension Int {
 
-    func convertDataTime(_ formattedDataType: FormattedDataType) -> String {
+    func convertDataTime(formattedDataType: FormattedDataType) -> String {
 
         let formData = Date(timeIntervalSince1970: TimeInterval(self))
         let formattedData = DateFormatter()

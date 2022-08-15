@@ -48,7 +48,7 @@ class MapViewController: UIViewController {
                 guard let current = value.current, let temp = current.temp, let lat = value.lat, let lon = value.lon, let weather = current.weather, let weatherDescription = weather.first?.description, let iconImage = weather.first?.icon else { return }
 
                 let dateTime = Int(Date().timeIntervalSince1970)
-                self.realmProvider.addCurrentForecastToQueryList(time: dateTime, forecast: weatherDescription, temp: temp)
+                self.realmProvider.addCurrentForecastToQueryList(time: dateTime, forecast: weatherDescription, temp: temp, isCurrentWeather: false)
                 self.realmProvider.addCoordinatesToQueryList(time: dateTime, lat: lat, lon: lon)
                 self.temperatureData = Int(temp)
 

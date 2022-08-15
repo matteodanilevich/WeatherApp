@@ -14,4 +14,14 @@ enum ContentType: Int {
     case hourly
     case daily
 
+    var description: String {
+        switch self {
+        case .current:
+            return "Current weather"
+        case .hourly:
+            return "Hourly weather"
+        case .daily:
+            return "Daily weather"
+        }
+    }
 }

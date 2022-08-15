@@ -34,10 +34,10 @@ class AlamofireProvider: APIProviderProtocol {
 
     func getWeatherForCityByCoordinates(lat: Double, lon: Double, completion: @escaping (Result<ForecastData, Error>) -> Void) {
 
-        var language = "en"
+        var lang = "en"
 
         if let preferredLanguage = Locale.preferredLanguages.first, preferredLanguage == "ru" {
-            language = preferredLanguage
+            lang = preferredLanguage
         }
 
         let provider = RealmProvider()
@@ -45,7 +45,7 @@ class AlamofireProvider: APIProviderProtocol {
         let systemType = settingsList?.systemType ?? false
         let systemUnits = systemType ? "metric" : "imperial"
 
-        let params = addParams(dataForQuery: ["lat": lat.description, "lon": lon.description, "exlcude": "minutely, alerts", "units": systemUnits, "lang": language])
+        let params = addParams(dataForQuery: ["lat": lat.description, "lon": lon.description, "exlcude": "minutely, alerts", "units": systemUnits, "lang": lang])
 
         AF.request(Constants.weatherURL, method: .get, parameters: params).responseDecodable(of: ForecastData.self) { response in
 
@@ -58,7 +58,7 @@ class AlamofireProvider: APIProviderProtocol {
         }
     }
 
-    func addParams(dataForQuery: [String: String]) -> [String: String] {
+    private func addParams(dataForQuery: [String: String]) -> [String: String] {
 
         var params: [String: String] = [:]
 

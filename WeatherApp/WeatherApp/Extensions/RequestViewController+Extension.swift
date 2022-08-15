@@ -24,7 +24,7 @@ extension RequestViewController: UITableViewDelegate, UITableViewDataSource {
 
             guard let currentForecast = data.currentForecast else { return dataCell }
 
-            dataCell.requestData.text = data.time.convertDataTime(.customTime)
+            dataCell.requestData.text = data.time.convertDataTime(formattedDataType: .customTime)
             dataCell.requestLatitude.text = data.latitude.description
             dataCell.requestLongitude.text = data.longitude.description
             dataCell.requestWeather.text = currentForecast.forecastDescription

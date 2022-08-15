@@ -7,9 +7,10 @@
 
 import Foundation
 import RealmSwift
+import UIKit
 
 class RealmProvider: RealmProviderProtocol {
-
+    
     private let realm = try! Realm()
 
     func writeDataToDataBase(name: Object) {
@@ -36,13 +37,14 @@ class RealmProvider: RealmProviderProtocol {
         writeDataToDataBase(name: ourRequest)
     }
 
-    func addCurrentForecastToQueryList(time: Int, forecast: String, temp: Double) {
+    func addCurrentForecastToQueryList(time: Int, forecast: String, temp: Double, isCurrentWeather: Bool) {
 
         let ourRequest = CurrentForecastForRealm()
 
         ourRequest.time = time
         ourRequest.forecastDescription = forecast
         ourRequest.temp = temp
+        ourRequest.isCurrentWeather = isCurrentWeather
 
         writeDataToDataBase(name: ourRequest)
     }

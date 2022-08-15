@@ -11,5 +11,5 @@ protocol APIProviderProtocol {
 
     func getCoordinatesByName(name: String, completion: @escaping (Result<[CityInfo], Error>) -> Void)
     func getWeatherForCityByCoordinates(lat: Double, lon: Double, completion: @escaping (Result<ForecastData, Error>) -> Void)
-    func addParams(dataForQuery: [String: String]) -> [String: String]
+//    func addParams(dataForQuery: [String: String]) -> [String: String]
 }
