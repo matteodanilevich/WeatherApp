@@ -116,7 +116,7 @@ class ForecastViewController: UIViewController {
 
         //MARK: City name
         nameOfCity = "Minsk"
-        if Locale.preferredLanguages.first == "ru" {
+        if Locale.autoupdatingCurrent.languageCode == "ru" {
             nameOfCity = "Минск"
         }
 
@@ -197,7 +197,7 @@ class ForecastViewController: UIViewController {
         guard let nameOfCity = nameOfCity else { return }
 
         var lang = "en"
-        if let preferredLanguage = Locale.preferredLanguages.first, preferredLanguage == "ru" {
+        if let preferredLanguage = Locale.autoupdatingCurrent.languageCode, preferredLanguage == "ru" {
             lang = preferredLanguage
         }
 

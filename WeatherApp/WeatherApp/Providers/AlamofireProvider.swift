@@ -36,7 +36,7 @@ class AlamofireProvider: APIProviderProtocol {
 
         var lang = "en"
 
-        if let preferredLanguage = Locale.preferredLanguages.first, preferredLanguage == "ru" {
+        if let preferredLanguage = Locale.autoupdatingCurrent.languageCode, preferredLanguage == "ru" {
             lang = preferredLanguage
         }
 
